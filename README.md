@@ -3,7 +3,7 @@ Un template LaTeX avec une page de garde ainsi que le style de bibliographie et 
 
 ## Compiler
 
-À cause de problèmes vachement bizarres avec les polices (les petites capitales en gras de la page de garde fonctionnent avec latex, mais pas avec xelatex), il est nécessaire de compiler `page_de_garde_fial.tex` séparément de `main.tex` et avant ce dernier. Dans un terminal linux, il faut donc taper :
+À cause l'utilisation d'une police très rarement utilisée en typographie (les petites capitales en gras de la page de garde fonctionnent avec latex, mais pas avec xelatex), il est nécessaire de compiler `page_de_garde_fial.tex` séparément de `main.tex` et avant ce dernier. Dans un terminal linux, il faut donc taper :
 
     pdflatex page_de_garde_fial.tex
     latexmk -pdf -xelatex main.tex
