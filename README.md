@@ -15,7 +15,8 @@ La compilation automatique sur [Overleaf](https://fr.overleaf.com/login) ne devr
 ## Conseils
 
 * Sur git et LaTeX : https://github.com/dspinellis/latex-advice#use-third-party-latex-packages
-* Il existe un excellent livre sur l'utilisation de LaTeX dans les sciences humaines. Disponible à cette adresse : https://geekographie.maieul.net/95
+* Sur l'intérêt de versionner ses travaux : https://geekographie.maieul.net/83
+* Un excellent livre sur l'utilisation de LaTeX dans les sciences humaines. Disponible à cette adresse : https://geekographie.maieul.net/95
 
 ## Contribuer
 
