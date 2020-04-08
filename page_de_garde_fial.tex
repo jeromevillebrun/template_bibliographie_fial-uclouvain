@@ -1,0 +1,81 @@
+%Cette page de garde est concue pour pdflatex. 
+
+\documentclass[12pt]{article}
+
+%Packages de base
+\usepackage[T1]{fontenc} %nécessaire pour pdflatex
+\usepackage[utf8]{inputenc} %nécessaire pour pdflatex
+\usepackage{textcomp} %donne un peu plus de caractères unicodes si besoin (uniquement avec pdflatex)
+\usepackage[a4paper]{geometry} %règle les dimensions de la page
+\usepackage[french]{babel} %adapte aux spécificités de la langue française
+
+%Packages "en plus"
+\usepackage{fullpage}  %pour mettre des informations plus bas dans la page
+\usepackage{calc} %pour faire les calculs de mise en page manuellement
+\usepackage[babel]{csquotes} %utiliser la commande \enquote{pour mettre le texte entre «»
+
+%Réglages
+\newcommand{\grd}{\fontsize{16}{16}\selectfont } %police taille 16
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+%ceci est la page de garde.
+%Attention : ne pas changer les espaces entre les lignes.
+%changer la taille de la police localement : \fontsize{10}{10}\selectfont 
+\begin{titlepage}
+	\enlargethispage{2cm}
+	\begin{center}
+		\textsc{\fontsize{12}{12}\selectfont Université catholique de Louvain}
+		
+		\textsc{\fontsize{12}{12}\selectfont Faculté de Philosophie, Arts et Lettres}
+		
+		\textsc{\fontsize{12}{12}\selectfont Commission de programme Histoire}
+		
+		\vspace{5.7cm}
+		
+		\selectfont\fontsize{14}{14}\selectfont \textbf{\textsc{LHIST 1130 : Exercices sur les questions d'histoire}} %-------------------------------Cours
+		
+		\vspace{3.5cm}
+		
+		
+		\textbf{\textsc{\grd\enquote{La censure de la presse en Belgique pendant la Seconde Guerre mondiale}}}   %-----------------------------Titre
+	\end{center}
+	\vspace{5.5cm}
+	
+	\begin{flushright}           %---------------------------------profs et assistants
+		\def \plusgrand {\fontsize{12}{12}\selectfont Marie Van Eeckenrode} %Placer ici le prof qui a le nometprénom le plus grand
+		\def \profa {\fontsize{12}{12}\selectfont Marie Van Eeckenrode}
+		\def \profb {\fontsize{12}{12}\selectfont Vincent Dujardin}
+		\def \assia {\fontsize{12}{12}\selectfont William Riguelle}
+		\def \assib {\fontsize{12}{12}\selectfont Oliver Latteur}
+		
+		\newlength{\lplusgrand}  \settowidth{\lplusgrand}{\plusgrand}
+		\newlength{\lprofa}  \settowidth{\lprofa}{\profa}
+		\newlength{\lprofb}  \settowidth{\lprofb}{\profb}
+		\newlength{\lassia}  \settowidth{\lassia}{\assia}
+		\newlength{\lassib}  \settowidth{\lassib}{\assib}
+		
+		
+		\fontsize{12}{12}\selectfont Professeurs : \profa  \hspace*{\dimexpr\lplusgrand - \dimexpr\lprofa}
+		
+		\fontsize{12}{12}\selectfont \profb  \hspace*{\dimexpr\lplusgrand - \dimexpr\lprofb}
+		
+		\fontsize{12}{12}\selectfont Assistants : \assia  \hspace*{\dimexpr\lplusgrand - \dimexpr\lassia}
+		
+		\fontsize{12}{12}\selectfont \assib  \hspace*{\dimexpr\lplusgrand - \dimexpr\lassib}
+	\end{flushright}
+	
+	\vspace{3.5cm}
+	\begin{center}
+		\fontsize{12}{12}\selectfont Année académique 2019-2020                       %-----------------------------------année académique
+		
+		\fontsize{12}{12}\selectfont Jérôme Villebrun - 1367 18 00                     %------------------------------------Auteur et Noma
+		
+		\fontsize{12}{12}\selectfont HIST 11BA                                     %----------------------------------------année d'études
+	\end{center}
+	
+	
+\end{titlepage}
+\setlength{\parskip}{2mm}
+\end{document}
