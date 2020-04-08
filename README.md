@@ -12,6 +12,10 @@ Une fois que la page de garde a été compilée une fois, il n'est plus nécessa
 
 La compilation automatique sur [Overleaf](https://fr.overleaf.com/login) ne devrait donc pas fonctionner pour le moment. Il faudrait, à l'occasion, ajouter un fichier `latexmkrc`, mais je ne sais pas comment on fait.
 
+## Conseils
+
+Il existe un excellent livre (libre) sur l'utilisation de LaTeX dans les sciences humaines. Disponible à cette adresse : https://geekographie.maieul.net/95
+
 ## Contribuer
 
 Le style bibliographique n'est pas du tout au point, et il est difficile de penser qu'il le sera un jour, vu l'étendue des ambiguités que présentent les normes bibliographiques de la FIAL (voir le fichier guide_references_bibliographiques.pdf). Toute aide et toute connaissance sur biblatex est la bienvenue (je suis pas un expert de LaTeX, j'essaye juste de me dépatouiller avec la documentation, mais ça n'est pas toujours évident).
