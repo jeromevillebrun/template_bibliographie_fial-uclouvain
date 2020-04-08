@@ -16,7 +16,7 @@ La compilation automatique sur [Overleaf](https://fr.overleaf.com/login) ne devr
 
 * Sur git et LaTeX : https://github.com/dspinellis/latex-advice#use-third-party-latex-packages
 * Sur l'intérêt de versionner ses travaux : https://geekographie.maieul.net/83
-* Un excellent livre sur l'utilisation de LaTeX dans les sciences humaines. Disponible à cette adresse : https://geekographie.maieul.net/95
+* Un excellent livre sur l'utilisation de LaTeX dans les sciences humaines. Disponible à cette adresse : https://geekographie.maieul.net/95. Notez qu'il n'est pas nécessaire de connaître tout sur tout de LaTeX pour pouvoir baliser son texte : les commandes de base suffisent et elles sont vraiment peu nombreuses. Il convient donc de ne pas se décourager face aux 300 pages de ce livre qu'il n'est pas nécessaire de lire en entier.
 
 ## Contribuer
 
