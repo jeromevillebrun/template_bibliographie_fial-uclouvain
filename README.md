@@ -14,7 +14,7 @@ La compilation automatique sur [Overleaf](https://fr.overleaf.com/login) ne devr
 
 ## Conseils
 
-Il existe un excellent livre (libre) sur l'utilisation de LaTeX dans les sciences humaines. Disponible à cette adresse : https://geekographie.maieul.net/95
+Il existe un excellent livre sur l'utilisation de LaTeX dans les sciences humaines. Disponible à cette adresse : https://geekographie.maieul.net/95
 
 ## Contribuer
 
