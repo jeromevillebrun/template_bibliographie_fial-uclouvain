@@ -39,5 +39,8 @@
 \renewcommand{\revsdnamepunct}{\addspace} %pas de "," entre nom et prénom.
 \renewcommand{\subtitlepunct}[0]{\adddot\addspace} %point entre titre et sous-titre
 
-%problème : les modifications sont faites pour un style mais pas l'autre.
+% Formatage des noms > on branche tout sur family-given
+\DeclareNameAlias{labelname}{family-given}% Lorsqu'on a juste le nom court (citation répétée)
+\DeclareNameAlias{sortname}{family-given}% Dans la biblio finale
+\DeclareNameAlias{default}{family-given}% Et partout ailleurs (sauf oubli de la part de MR)
 
