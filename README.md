@@ -10,7 +10,7 @@ Un template LaTeX avec une page de garde ainsi que le style de bibliographie et 
 
 Une fois que la page de garde a été compilée une fois, il n'est plus nécessaire de la recompiler systématiquement (la deuxième commande intègre le pdf généré par la première au document final `main.pdf`).
 
-La compilation automatique sur [Overleaf](https://fr.overleaf.com/login) ne devrait donc pas fonctionner pour le moment. Il faudrait, à l'occasion, ajouter un fichier `latexmkrc`, mais je ne sais pas comment on fait.
+Cependant, depuis l'ajout du fichier, `latexmkrc`, latexmk réalise la compilation de la page de garde automatiquement. La première commande est inutile, et la deuxième commande suffit. Sur [Overleaf](https://fr.overleaf.com/login), la compilation est automatique (l'utilisation d'overleaf plutôt qu'une installation locale de LaTeX est donc recommandée). Si vous ne voulez pas de page de garde, vous devrez supprimer le fichier `latexmkrc` qui ne sera plus d'aucune utilité.
 
 ## Conseils
 
