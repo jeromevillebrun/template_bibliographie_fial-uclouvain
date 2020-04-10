@@ -29,3 +29,10 @@ Pour contribuer :
 3. Committez les changements (`git commit -am "Explication de ce que vous avez fait`).
 4. Pushez ça sur la branche (`git push origin ma-nouvelle-fonctionnalite`).
 5. Créez la nouvelle pull request.
+
+À faire :
+
+* Changer l'ordre des informations : mentiondédition, collection
+* changer les mots clés anglais (dans, op. cit, etc.)
+* S'arranger pour qu'il n'affiche pas les informations qui ne sont pas sencées figurer (ex : langue)
+
