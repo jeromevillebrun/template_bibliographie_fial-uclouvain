@@ -34,5 +34,6 @@ Pour contribuer :
 
 * Changer l'ordre des informations : mentiondédition, collection
 * changer les mots clés anglais (dans, op. cit, etc.)
+* Trouver le moyen que la mention d'édition s'affiche correctement (1\up{e} edition}
 * S'arranger pour qu'il n'affiche pas les informations qui ne sont pas sencées figurer (ex : langue)
 
