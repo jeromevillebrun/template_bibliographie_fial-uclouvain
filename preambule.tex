@@ -36,17 +36,17 @@
 
 %----Réglages de bibliographie-----%
 
-
 \addbibresource{bibdata.bib} %choisit le fichier contenant les références.
-\renewcommand{\newunitpunct}[0]{\addcomma\addspace} %séparateur entre les informations = ","
-\renewcommand{\revsdnamepunct}{\addspace} %pas de "," entre nom et prénom.
-\renewcommand{\subtitlepunct}[0]{\adddot\addspace} %point entre titre et sous-titre
-%Pas besoin de mettre un point après une particule commmençant par une minuscule (c'est dû à un manque de clarté dans le guide de la fial).
+
+\renewcommand{\newunitpunct}{\addcomma\space} %séparateur entre les informations = ","
+\renewcommand{\subtitlepunct}{\addperiod\space} %point entre titre et sous-titre
+\renewcommand{\revsdnamepunct}{} %pas de "," entre nom et prénom
+%Pas besoin de mettre un point après un nom de famille à particule commmençant par une minuscule (c'est dû à un manque de clarté dans le guide de la fial).
 
 % Formatage des noms de personnes > on branche tout sur family-given
-\DeclareNameAlias{labelname}{family-given}% Lorsqu'on a juste le nom court (citation répétée)
-\DeclareNameAlias{sortname}{family-given}% Dans la biblio finale
 \DeclareNameAlias{default}{family-given}% Et partout ailleurs (sauf oubli de la part de MR)
+\DeclareNameAlias{labelname}{default}% Lorsqu'on a juste le nom court (citation répétée)
+\DeclareNameAlias{sortname}{default}% Dans la biblio finale
 
 %Redéfinir les mots pour le français. On peut trouver les clés dans le fichier /usr/local/texlive/2019/texmf-dist/tex/latex/biblatex/lbx/french.lbx
 \DefineBibliographyStrings{french}{%
