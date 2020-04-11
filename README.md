@@ -36,4 +36,5 @@ Pour contribuer :
 * Trouver le moyen que la mention d'édition s'affiche correctement (1\up{e} edition}
 * Vérifier l'affichage d'un article type.
 * S'arranger pour qu'il n'affiche pas les informations qui ne sont pas sencées figurer (ex : langue)
-* Choisir le bon style de la famille verbose (trad1, 2 ou 3) pour la gestion des abbréviations de type op.cit. la plus proche de celui de la FIAL. Si besoin, redéfinir des macros pour que ça corresponde parfaitement. Les macros se trouvent dans cbx (/usr/local/texlive/2019/texmf-dist/tex/latex/biblatex/cbx/).
+* Choisir le bon style de la famille verbose (trad1, 2 ou 3) pour la gestion des abbréviations de type op.cit. la plus proche de celui de la FIAL. Si besoin, redéfinir des macros pour que ça corresponde parfaitement. Les macros se trouvent dans cbx (/usr/local/texlive/2019/texmf-dist/tex/latex/biblatex/cbx/). Il y a encore un truc à lire dans le latex sciences humaines là-dessus (à la toute fin de la personnalisation des styles).
+* Vérifier que l'affichage correspond aux consignes fial pour chaque type d'entrée possible (en dresser la liste).
