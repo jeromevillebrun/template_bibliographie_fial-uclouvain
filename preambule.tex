@@ -4,7 +4,7 @@
 \usepackage{xunicode} %pour l'unicode de XeLaTeX
 \usepackage[a4paper]{geometry} %règle les dimensions de la page
 \usepackage[french]{babel} %adapte aux spécificités de la langue française
-\usepackage[style=verbose-trad3,sortlocale=auto,sortcase=false,maxnames=3,minnames=1,backref=false,backrefstyle=three,isbn=false,url=false,doi=false,eprint=false,citepages=omit,nosortothers=true,strict=false]{biblatex}
+\usepackage[style=verbose-trad3,sortlocale=auto,sortcase=false,maxnames=3,minnames=1,backref=false,backrefstyle=three,isbn=false,url=false,doi=false,eprint=false,citepages=omit,nosortothers=true,strict=false,abbreviate=false]{biblatex}
 %- citestyle (=numeric par défaut). Mettre sur un style verbose-trad2 ou 3, c'est le style qui ressemble le plus à celui de la FIAL. Il faut mieux mettre verbose-trad3 que verbose-trad2 parce que verbose-trad2 indique pp. X-Y quand il y a plusieurs pages, tandis que trad3 indique p. X-Y.
 %- sortlocale (=auto par défaut) fait que les algorithmes alphabétiques de tris unicode s'adaptent à la langue définie par babel (surtout pour ceux qui écrivent en allemand).
 %- sortcase (=true par défaut) « Whether or not to sort the bibliography and the list of shorthands case-sensitively. » → pas très clair, il faudra faire des tests pour voir lequel il faut mettre pour que ça trie case-insensitively.
@@ -20,6 +20,7 @@
 %- citepages (=permit par défaut). Mettre sur "omit" pour qu'il empêche d'avoir deux mentions de pages dans la citation : le champ pages et la postnote (documentation biblatex, p. 61).
 %- nosortothers (=false par défaut). Mettre sur true pour qu'il ne tienne pas compte des "e.a." (plus de 3 noms d'auteurs) dans le classement.
 %- strict (=false par défaut) mettre sur false pour éviter des ambiguités dans l'utilisation des ibid.
+%- abbreviate (=true par défaut) mettre sur false pour qu'il n'utilise pas de chaines de langues abrégées.
 \usepackage{hyperref} %pour des liens hypertexte. chargé après biblatex.
 \usepackage{xurl} %pour avoir des url longs bien mis en page
 \usepackage{enumitem} %nécessaire pour personnaliser la forme des listes
