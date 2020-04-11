@@ -34,17 +34,22 @@
 %Réglages
 \setlist[itemize]{label=\textbullet} %utilise bullet point pour les listes
 
-%Réglages de bibliographie
+
+%----Réglages de bibliographie-----%
+
+
 \addbibresource{bibdata.bib} %choisit le fichier contenant les références.
 \renewcommand{\newunitpunct}[0]{\addcomma\addspace} %séparateur entre les informations = ","
 \renewcommand{\revsdnamepunct}{\addspace} %pas de "," entre nom et prénom.
 \renewcommand{\subtitlepunct}[0]{\adddot\addspace} %point entre titre et sous-titre
 %Pas besoin de mettre un point après une particule commmençant par une minuscule (c'est dû à un manque de clarté dans le guide de la fial).
 
-%Il faut essayer de remplacer les deux points entre lieu et maison d'édition par une virgule.
-
-% Formatage des noms > on branche tout sur family-given
+% Formatage des noms de personnes > on branche tout sur family-given
 \DeclareNameAlias{labelname}{family-given}% Lorsqu'on a juste le nom court (citation répétée)
 \DeclareNameAlias{sortname}{family-given}% Dans la biblio finale
 \DeclareNameAlias{default}{family-given}% Et partout ailleurs (sauf oubli de la part de MR)
 
+%Redéfinir les mots pour le français
+\DefineBibliographyStrings{french}{
+	in = {dans}
+}
