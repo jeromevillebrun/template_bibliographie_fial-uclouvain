@@ -66,6 +66,15 @@
   \newunit
 }
 
+\renewbibmacro*{series+number}{%
+  \iffieldundef{series}
+    {}
+    {\printtext[parens]{%
+      \printfield{series}%
+      \setunit*{\addcomma\addspace}%
+      \printfield{number}}%
+    \newunit}}
+
 \DeclareBibliographyDriver{book}{%
   \usebibmacro{bibindex}%
   \usebibmacro{begentry}%
@@ -88,10 +97,10 @@
   \newunit
   \printfield{volumes}%
   \newunit\newblock
-  \usebibmacro{publisher+location+date}%
-  \newunit\newblock
   \printfield{note}%
   \newunit\newblock
+  \usebibmacro{publisher+location+date}%
+  \setunit{\addspace}%
   \usebibmacro{series+number}%
   \newunit\newblock
   \usebibmacro{chapter+pages}%
@@ -113,4 +122,3 @@
      \usebibmacro{related}}
     {}%
   \usebibmacro{finentry}}
-
