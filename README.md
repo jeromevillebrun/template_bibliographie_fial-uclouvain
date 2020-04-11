@@ -33,7 +33,6 @@ Pour contribuer :
 À faire :
 
 * Changer l'ordre des informations : mettre dans l'odre "lieu-éditeur-date-collection-numerodecollection" au lieu de "collection-numerodecollection-lieu-editeur-date".
-* Remplacer les deux points entre le lieu d'édition et l'éditeur commercial par une virgule;
 * Mettre la collection et son numéro entre parenthèse à la fin.
 * changer les mots clés anglais (dans, op. cit, etc.)
 * Trouver le moyen que la mention d'édition s'affiche correctement (1\up{e} edition}
