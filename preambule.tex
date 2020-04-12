@@ -19,7 +19,8 @@
 	%ibidpage=true,%- ibidpage (=false par défaut). Mettre sur true pour indiquer que ibidem sans mention de page signifie "même travail + même page" (documentation biblatex p. 61). Ne fonctionne pas pour verbose-trad3.
 	nosortothers=true,%nosortothers (=false par défaut). Mettre sur true pour qu'il ne tienne pas compte des "e.a." (plus de 3 noms d'auteurs) dans le classement.
 	strict=false,%strict (=false par défaut) mettre sur false pour éviter des ambiguités dans l'utilisation des ibid.
-	giveninits=false%giveninits (=false par défaut) mettre sur true remplacer tous les prénoms par leurs initiale.
+	giveninits=false,%giveninits (=false par défaut) mettre sur true remplacer tous les prénoms par leurs initiale.
+	dashed=false%dashed (=true par défaut) mettre sur false pour ne pas replacer un éditeur qui est le même que l'auteur par un tiret, mais l'imprimer deux fois.
 	]{biblatex}
 \usepackage{hyperref} %pour des liens hypertexte. chargé après biblatex.
 \usepackage{xurl} %pour avoir des url longs bien mis en page
@@ -52,6 +53,12 @@
 %Redéfinir les mots pour le français. On peut trouver les clés dans le fichier /usr/local/texlive/2019/texmf-dist/tex/latex/biblatex/lbx/french.lbx
 \DefineBibliographyStrings{french}{%
 	in = {dans}%
+}
+
+\AtEveryBibitem{%Pour n'afficher aucun de ces champs
+  \clearname{translator}%
+  \clearfield{pagetotal}%
+  \clearlist{language}%
 }
 
 \renewcommand{\mkibid}[1]{\emph{#1}} %Met en italique toutes les chaînes de langue consacrées aux abréviations universitaires de type op. cit. (peut-être pas une si bonne idée : à vérifier. Il est possible que certaines ne doivent justememnt pas être en italiques. Dans ce cas, il faudra tous les redéfinir avec la commande précédente.
