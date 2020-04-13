@@ -93,6 +93,8 @@
     \newunit}}
 
 \renewbibmacro*{journal+issuetitle}{%
+  \usebibmacro{issue}%ajoute le titre du dossier thématique
+  \setunit{\addcomma\space}%
   \usebibmacro{journal}%
   \setunit*{\addcomma\addspace}%
   \iffieldundef{series}
@@ -103,8 +105,6 @@
   \usebibmacro{volume+number+eid}%
   \setunit{\addspace}%
   \usebibmacro{issue+date}%
-  \setunit{\addcolon\space}%
-  \usebibmacro{issue}%ajoute le titre du dossier thématique
   \newunit}
 
 \renewbibmacro*{issue+date}{%
