@@ -91,6 +91,21 @@
       \printfield{number}}%
     \newunit}}
 
+\newbibmacro*{journal+issuetitle}{%
+  \usebibmacro{journal}%
+  \setunit*{\addcomma\addspace}%
+  \iffieldundef{series}
+    {}
+    {\newunit
+     \printfield{series}%
+     \setunit{\addspace}}%
+  \usebibmacro{volume+number+eid}%
+  \setunit{\addspace}%
+  \usebibmacro{issue+date}%
+  \setunit{\addcolon\space}%
+  \usebibmacro{issue}%
+  \newunit}
+
 \DeclareBibliographyDriver{book}{%
   \usebibmacro{bibindex}%
   \usebibmacro{begentry}%
