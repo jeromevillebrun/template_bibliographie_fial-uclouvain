@@ -1,7 +1,16 @@
 # template_bibliographie_fial-uclouvain
 Un template LaTeX avec une page de garde ainsi que le style de bibliographie et de citation de la Faculté de philosophie, arts et lettres (UCLouvain), pour une utilisation avec LaTeX, réalisé avec le package biblatex.
 
-## Compiler
+## Utilisation
+
+### Entrer les données bibliographiques
+
+Où trouver les données bibliographiques
+Les champs pour chaque type d'entrées (vérifier les données bibliographiques)
+
+### Citer dans le texte
+
+### Compiler
 
 À cause de l'utilisation d'une police très rarement utilisée en typographie (les petites capitales en gras de la page de garde fonctionnent avec latex, mais pas avec xelatex), il est nécessaire de compiler `page_de_garde_fial.tex` séparément de `main.tex` et avant ce dernier. Dans un terminal linux, il faut donc taper :
 
