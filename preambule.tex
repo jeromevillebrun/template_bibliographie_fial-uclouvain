@@ -90,6 +90,10 @@
       \printfield{number}}%
     \newunit}}
 
+\newbibmacro*{in:}{%
+  \printtext{%
+    \bibstring{in}\intitlepunct}}
+
 \DeclareBibliographyDriver{book}{%
   \usebibmacro{bibindex}%
   \usebibmacro{begentry}%
