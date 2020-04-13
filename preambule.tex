@@ -56,10 +56,16 @@
 	andothers = {e\adddot a\adddot}%
 }
 
-\AtEveryBibitem{%Pour n'afficher aucun de ces champs
-  \clearname{translator}%
-  \clearfield{pagetotal}%
-  \clearlist{language}%
+
+\DeclareSourcemap{%pour enlever automatiquement les champs non demandés par les normes FIAL.
+  \maps[datatype=bibtex]{
+    \map{
+      \step[fieldset=addendum, null]
+      \step[fieldset=note, null]
+      \step[fieldset=pagetotal, null]
+      \step[fieldset=language, null]
+    }
+  }
 }
 
 \renewcommand{\mkibid}[1]{\emph{#1}} %Met en italique toutes les chaînes de langue consacrées aux abréviations universitaires de type op. cit. (peut-être pas une si bonne idée : à vérifier. Il est possible que certaines ne doivent justememnt pas être en italiques. Dans ce cas, il faudra tous les redéfinir avec la commande précédente.
