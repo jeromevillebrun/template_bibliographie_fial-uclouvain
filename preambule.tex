@@ -68,6 +68,7 @@
   }
 }
 
+\renewcommand*{\intitlepunct}{\space}%Enlève les deux points entre dans et le titre de la revue/ouvrage.
 \renewcommand{\mkibid}[1]{\emph{#1}} %Met en italique toutes les chaînes de langue consacrées aux abréviations universitaires de type op. cit. (peut-être pas une si bonne idée : à vérifier. Il est possible que certaines ne doivent justememnt pas être en italiques. Dans ce cas, il faudra tous les redéfinir avec la commande précédente.
 
 \renewbibmacro*{publisher+location+date}{%
@@ -89,10 +90,6 @@
       \setunit*{\addcomma\addspace}%
       \printfield{number}}%
     \newunit}}
-
-\newbibmacro*{in:}{%
-  \printtext{%
-    \bibstring{in}\intitlepunct}}
 
 \DeclareBibliographyDriver{book}{%
   \usebibmacro{bibindex}%
