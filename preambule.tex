@@ -6,7 +6,7 @@
 \usepackage[french]{babel} %adapte aux spécificités de la langue française
 \usepackage[style=verbose-trad3,%style (=numeric par défaut). Mettre sur un style verbose-trad2 ou 3, c'est le style qui ressemble le plus à celui de la FIAL. Il faut mieux mettre verbose-trad3 que verbose-trad2 parce que verbose-trad2 indique pp. X-Y quand il y a plusieurs pages, tandis que trad3 indique p. X-Y.
 	sortlocale=auto,%sortlocale (=auto par défaut) fait que les algorithmes alphabétiques de tris unicode s'adaptent à la langue définie par babel (surtout pour ceux qui écrivent en allemand, avec les ß).
-	sortcase=false,%sortcase (=true par défaut) « Whether or not to sort the bibliography and the list of shorthands case-sensitively. » → pas très clair, il faudra faire des tests pour voir lequel il faut mettre pour que ça trie case-insensitively.
+	sortcase=false,%sortcase (=true par défaut) Mettre sur false pour trier case insensitively dans la bibliographie
 	maxnames=3,%maxnames (=3 par défaut). S'il y a plus de 3 auteurs, biblatex tronque la liste (documentation biblatex, p. 48). Il faudra voir comment il fait pour tronquer la liste ! La norme exige qu'on ajoute "e.a." ex : ROULET Eddy e.a.
 	minnames=1,% minnames (=1 par défaut). Définit le nombre d'auteurs à afficher quand il y en a trop (documentation biblatex, p. 48).
 	backref=false,%backref (=true par défaut) demande à biblatex d'indiquer à côté de chaque entrée dans la bibliographie les pages auxquelles l'entrée a été citée (documentation biblatex, p. 51).
