@@ -104,7 +104,14 @@
   \setunit{\addspace}%
   \usebibmacro{issue+date}%
   \setunit{\addcolon\space}%
-  \usebibmacro{issue}%
+  \usebibmacro{issue}%ajoute le titre du dossier thématique
+  \newunit}
+
+\renewbibmacro*{issue+date}{%
+  \setunit{\addcomma\addspace}%
+  \printfield{issue}%
+  \setunit*{\addcomma\addspace}%
+  \usebibmacro{date}%
   \newunit}
 
 \DeclareBibliographyDriver{book}{%
