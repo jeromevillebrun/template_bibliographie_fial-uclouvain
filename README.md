@@ -5,8 +5,13 @@ Un template LaTeX avec une page de garde ainsi que le style de bibliographie et 
 
 ### Entrer les données bibliographiques
 
-Où trouver les données bibliographiques
-Les champs pour chaque type d'entrées (vérifier les données bibliographiques)
+#### Où trouver les données bibliographiques
+
+#### Les champs pour chaque type d'entrées (vérifier les données bibliographiques)
+
+@article
+
+* `issuetitle` et `issuesubtitle`, spécifie le titre du numéro spécial ou du dossier thématique.
 
 ### Citer dans le texte
 
