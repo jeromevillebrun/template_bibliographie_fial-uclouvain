@@ -15,7 +15,8 @@
 %Redéfinir les mots pour le français. On peut trouver les clés dans le fichier /usr/local/texlive/2019/texmf-dist/tex/latex/biblatex/lbx/french.lbx
 \DefineBibliographyStrings{french}{%
 	in = {dans},%
-	andothers = {e\adddot a\adddot}%
+	andothers = {e\adddot a\adddot},%
+	urlseen = {consulté le}%
 }
 
 
@@ -34,6 +35,8 @@
 \renewcommand*{\intitlepunct}{\space}%Enlève les deux points entre dans et le titre de la revue/ouvrage.
 \renewcommand{\mkibid}[1]{\emph{#1}} %Met en italique toutes les chaînes de langue consacrées aux abréviations universitaires de type op. cit. (peut-être pas une si bonne idée : à vérifier. Il est possible que certaines ne doivent justememnt pas être en italiques. Dans ce cas, il faudra tous les redéfinir avec la commande précédente.
 \DeclareFieldFormat{issuetitle}{\mkbibquote{#1}}
+\DeclareFieldFormat{url}{\url{#1}}
+\DeclareFieldFormat[online]{title}{\mkbibquote{#1\isdot}}
 
 \renewbibmacro*{publisher+location+date}{%
   \printlist{location}%
@@ -152,6 +155,47 @@
     {}%
   \newunit\newblock
   \usebibmacro{doi+eprint+url}%
+  \newunit\newblock
+  \usebibmacro{addendum+pubstate}%
+  \setunit{\bibpagerefpunct}\newblock
+  \usebibmacro{pageref}%
+  \newunit\newblock
+  \iftoggle{bbx:related}
+    {\usebibmacro{related:init}%
+     \usebibmacro{related}}
+    {}%
+  \usebibmacro{finentry}}
+
+\DeclareBibliographyDriver{online}{%
+  \usebibmacro{bibindex}%
+  \usebibmacro{begentry}%
+  \usebibmacro{author/editor+others/translator+others}%
+  \setunit{\printdelim{nametitledelim}}\newblock
+  \usebibmacro{title}%
+  \newunit
+  \printlist{language}%
+  \newunit\newblock
+  \usebibmacro{byauthor}%
+  \newunit\newblock
+  \usebibmacro{byeditor+others}%
+  \newunit\newblock
+  \printfield{version}%
+  \newunit
+  \printfield{note}%
+  \newunit\newblock
+  \printlist{organization}%
+  %\newunit\newblock
+  %\usebibmacro{date}%supprimé la date, pour qu'elle ne soit plus obligatoire
+  \newunit\newblock
+  \iftoggle{bbx:doi}
+    {\printfield{doi}}
+    {}%
+  \newunit\newblock
+  \iftoggle{bbx:eprint}
+    {\usebibmacro{eprint}}
+    {}%
+  \newunit\newblock
+  \usebibmacro{url+urldate}%
   \newunit\newblock
   \usebibmacro{addendum+pubstate}%
   \setunit{\bibpagerefpunct}\newblock
