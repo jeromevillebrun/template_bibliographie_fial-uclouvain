@@ -46,7 +46,6 @@ Pour contribuer :
 
 À faire :
 
-* Mettre le titre de dossier thématique entre guillemets et en romains.
 * Ajouter la mention "dossier spécial". Voir pour utiliser titleaddon, ou bien créer un nouveau champ.
 * Vérifier que l'affichage correspond aux consignes fial pour chaque type d'entrée possible (en dresser la liste).
 * changer les mots clés anglais (dans, op. cit, etc.)
