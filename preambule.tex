@@ -4,26 +4,8 @@
 \usepackage{xunicode} %pour l'unicode de XeLaTeX
 \usepackage[a4paper]{geometry} %règle les dimensions de la page
 \usepackage[french]{babel} %adapte aux spécificités de la langue française
-\usepackage[style=verbose-trad3,%style (=numeric par défaut). Mettre sur un style verbose-trad2 ou 3, c'est le style qui ressemble le plus à celui de la FIAL. Il faut mieux mettre verbose-trad3 que verbose-trad2 parce que verbose-trad2 indique pp. X-Y quand il y a plusieurs pages, tandis que trad3 indique p. X-Y.
-	sortlocale=auto,%sortlocale (=auto par défaut) fait que les algorithmes alphabétiques de tris unicode s'adaptent à la langue définie par babel (surtout pour ceux qui écrivent en allemand, avec les ß).
-	sortcase=false,%sortcase (=true par défaut) Mettre sur false pour trier case insensitively dans la bibliographie
-	maxnames=3,%maxnames (=3 par défaut). S'il y a plus de 3 auteurs, biblatex tronque la liste (documentation biblatex, p. 48). Il faudra voir comment il fait pour tronquer la liste ! La norme exige qu'on ajoute "e.a." ex : ROULET Eddy e.a.
-	minnames=1,% minnames (=1 par défaut). Définit le nombre d'auteurs à afficher quand il y en a trop (documentation biblatex, p. 48).
-	backref=false,%backref (=true par défaut) demande à biblatex d'indiquer à côté de chaque entrée dans la bibliographie les pages auxquelles l'entrée a été citée (documentation biblatex, p. 51).
-	backrefstyle=three,%backrefstyle (=three par défaut) indique le formatage des back references (voir documentation biblatex, p. 51).
-	isbn=false,%isbn (=true par défaut) pour choisir d'indiquer ou pas l'isbn.
-	url=false,%url (=true par défaut) pour choisir d'indiquer ou pas l'url. Même s'il est sur false, les entrées de type @online indiquent quand même l'url (car il est obligatoire pour ce type d'entrées.
-	doi=false,%doi (=true par défaut) pour choisir d'indiquer ou pas le doi.
-	eprint=false,%eprint (=true par défaut) pour choisir d'indiquer ou pas le eprint.
-	citepages=omit,%citepages (=permit par défaut). Mettre sur "omit" pour qu'il empêche d'avoir deux mentions de pages dans la citation : le champ pages et la postnote (documentation biblatex, p. 61).
-	%ibidpage=true,%- ibidpage (=false par défaut). Mettre sur true pour indiquer que ibidem sans mention de page signifie "même travail + même page" (documentation biblatex p. 61). Ne fonctionne pas pour verbose-trad3.
-	nosortothers=true,%nosortothers (=false par défaut). Mettre sur true pour qu'il ne tienne pas compte des "e.a." (plus de 3 noms d'auteurs) dans le classement.
-	strict=false,%strict (=false par défaut) mettre sur false pour éviter des ambiguités dans l'utilisation des ibid.
-	giveninits=false,%giveninits (=false par défaut) mettre sur true remplacer tous les prénoms par leurs initiale.
-	dashed=false,%dashed (=true par défaut) mettre sur false pour ne pas replacer un éditeur qui est le même que l'auteur par un tiret, mais l'imprimer deux fois.
-	urldate=long,%pour que les dates de "consulté le" pour les url soient en forme longue, et pas en slash.
-	dateabbrev=false%pour avoir les mois en entier
-	]{biblatex}
+\usepackage[style=verbose-trad3%style (=numeric par défaut). Mettre sur un style verbose-trad2 ou 3, c'est le style qui ressemble le plus à celui de la FIAL. Il faut mieux mettre verbose-trad3 que verbose-trad2 parce que verbose-trad2 indique pp. X-Y quand il y a plusieurs pages, tandis que trad3 indique p. X-Y.
+]{biblatex}
 \usepackage{hyperref} %pour des liens hypertexte. chargé après biblatex.
 \usepackage{xurl} %pour avoir des url longs bien mis en page
 \usepackage{enumitem} %nécessaire pour personnaliser la forme des listes
