@@ -57,7 +57,7 @@
 
 \renewbibmacro*{journal+issuetitle}{%
   \usebibmacro{issue}%ajoute le titre du dossier thématique
-  \setunit{\addcomma\space}%
+  \iffieldundef{issuetitle}{\setunit{\addspace}}{\setunit{\addcomma\space}}%
   \usebibmacro{journal}%
   \setunit*{\addcomma\addspace}%
   \iffieldundef{series}
