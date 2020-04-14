@@ -44,12 +44,17 @@ Pour contribuer :
 4. Pushez ça sur la branche (`git push origin ma-nouvelle-fonctionnalite`).
 5. Créez la nouvelle pull request.
 
-À faire :
+Si vous désirez aider, mais que vous n'avez pas envie d'apprendre comment fonctionne les macros biblatex, vous pouvez aussi...
 
-* Vérifier que l'affichage correspond aux consignes fial pour chaque type d'entrée possible (en dresser la liste).
+* Tester le style et identifier ce qu'il faut modifier, intervertir, s'il y a des choses à ajouter, etc. (ouvrir une [issue](https://github.com/jeromevillebrun/template_bibliographie_fial-uclouvain/issues))
+* Identifier quel style de citation (parmis [verbose-trad1](http://mirrors.ibiblio.org/CTAN/macros/latex/exptl/biblatex/doc/examples/74-style-verbose-trad1-biber.pdf), [verbose-trad2](http://ctan.math.utah.edu/ctan/tex-archive/macros/latex/contrib/biblatex/doc/examples/75-style-verbose-trad2-bibtex.pdf) et [verbose-trad3](http://ctan.math.washington.edu/tex-archive/macros/latex/exptl/biblatex/doc/examples/76-style-verbose-trad3-bibtex.pdf)) qui correspond le mieux à la gestion des op.cit., ibid., etc. de la [norme FIAL](https://github.com/jeromevillebrun/template_bibliographie_fial-uclouvain/blob/master/guide_references_bibliographiques.pdf).
+* Identifier les éventuelles modifications qu'il faudrait opérer sur le style choisi pour qu'il corresponde parfaitement à la norme FIAL.
+
+Todolist :
+
+* Vérifier que l'affichage correspond aux consignes fial pour chaque type d'entrée possible.
 * changer les mots clés anglais (dans, op. cit, etc.)
 * Ajouter la mention "dossier spécial". Voir pour utiliser titleaddon, ou bien créer un nouveau champ. (une issue a été ouverte sur le package biblatex pour l'ajout d'un champ issuetitleaddon).
 * Trouver le moyen que la mention d'édition s'affiche correctement (1\up{e} edition}
-* Vérifier l'affichage d'un article type.
 * S'arranger pour qu'il n'affiche pas les informations qui ne sont pas sencées figurer (ex : langue)
 * Choisir le bon style de la famille verbose (trad1, 2 ou 3) pour la gestion des abbréviations de type op.cit. la plus proche de celui de la FIAL. Si besoin, redéfinir des macros pour que ça corresponde parfaitement. Les macros se trouvent dans cbx (/usr/local/texlive/2019/texmf-dist/tex/latex/biblatex/cbx/). Il y a encore un truc à lire dans le latex sciences humaines là-dessus (à la toute fin de la personnalisation des styles).
