@@ -46,9 +46,9 @@ Pour contribuer :
 
 À faire :
 
-* Ajouter la mention "dossier spécial". Voir pour utiliser titleaddon, ou bien créer un nouveau champ. (une issue a été ouverte sur le package biblatex pour l'ajout d'un champ issuetitleaddon).
 * Vérifier que l'affichage correspond aux consignes fial pour chaque type d'entrée possible (en dresser la liste).
 * changer les mots clés anglais (dans, op. cit, etc.)
+* Ajouter la mention "dossier spécial". Voir pour utiliser titleaddon, ou bien créer un nouveau champ. (une issue a été ouverte sur le package biblatex pour l'ajout d'un champ issuetitleaddon).
 * Trouver le moyen que la mention d'édition s'affiche correctement (1\up{e} edition}
 * Vérifier l'affichage d'un article type.
 * S'arranger pour qu'il n'affiche pas les informations qui ne sont pas sencées figurer (ex : langue)
