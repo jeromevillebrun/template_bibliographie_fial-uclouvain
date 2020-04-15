@@ -8,7 +8,7 @@
 	backref=false,%backref (=true par défaut) demande à biblatex d'indiquer à côté de chaque entrée dans la bibliographie les pages auxquelles l'entrée a été citée (documentation biblatex, p. 51).
 	backrefstyle=three,%backrefstyle (=three par défaut) indique le formatage des back references (voir documentation biblatex, p. 51).
 	isbn=false,%isbn (=true par défaut) pour choisir d'indiquer ou pas l'isbn.
-	url=false,%url (=true par défaut) pour choisir d'indiquer ou pas l'url. Même s'il est sur false, les entrées de type @online indiquent quand même l'url (car il est obligatoire pour ce type d'entrées.
+	url=false,%url (=true par défaut) pour choisir d'indiquer ou pas l'url. Même s'il est sur false, les entrées de type @online indiquent quand même l'url (car il est obligatoire pour ce type d'entrées).
 	doi=false,%doi (=true par défaut) pour choisir d'indiquer ou pas le doi.
 	eprint=false,%eprint (=true par défaut) pour choisir d'indiquer ou pas le eprint.
 	citepages=omit,%citepages (=permit par défaut). Mettre sur "omit" pour qu'il empêche d'avoir deux mentions de pages dans la citation : le champ pages et la postnote (documentation biblatex, p. 61).
@@ -219,8 +219,8 @@
   \printfield{note}%
   \newunit\newblock
   \printlist{organization}%
-  %\newunit\newblock
-  %\usebibmacro{date}%supprimé la date, pour qu'elle ne soit plus obligatoire
+  \newunit\newblock
+  \usebibmacro{date}%
   \newunit\newblock
   \iftoggle{bbx:doi}
     {\printfield{doi}}
