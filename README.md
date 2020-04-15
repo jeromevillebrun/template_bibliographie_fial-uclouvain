@@ -9,6 +9,8 @@ Un template LaTeX avec une page de garde ainsi que le style de bibliographie et 
 
 #### Les champs pour chaque type d'entrées (vérifier les données bibliographiques)
 
+[Ce blog](https://serialmentor.com/blog/2015/10/2/Bibtex) donne des pistes pour vérifier que les données trouvées sur internet au format BibTeX sont correctes.
+
 @article
 
 * `issuetitle` et `issuesubtitle`, spécifie le titre du numéro spécial ou du dossier thématique. Ils sont rarement repris dans les bases de données en ligne.
