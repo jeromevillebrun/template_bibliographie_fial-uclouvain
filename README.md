@@ -11,7 +11,7 @@ Un template LaTeX avec une page de garde ainsi que le style de bibliographie et 
 
 @article
 
-* `issuetitle` et `issuesubtitle`, spécifie le titre du numéro spécial ou du dossier thématique.
+* `issuetitle` et `issuesubtitle`, spécifie le titre du numéro spécial ou du dossier thématique. Ils sont rarement repris dans les bases de données en ligne.
 * `issuetitleaddon` spécifie la mention du type de numéro spécial telle qu'affichée sur la page de titre (ex : "dossier thématique", "numéro spécial", etc.). C'est un champ inventé pour l'occasion (pas un champ intégré de base à biblatex). Il faut donc systématiquement l'ajouter pour chaque entrée de type @article ou @periodical s'il figure sur la page de titre.
 
 ### Citer dans le texte
@@ -55,7 +55,6 @@ Todolist :
 
 * Vérifier que l'affichage correspond aux consignes fial pour chaque type d'entrée possible.
 * changer les mots clés anglais (dans, op. cit, etc.)
-* Ajouter la mention "dossier spécial". Voir pour utiliser titleaddon, ou bien créer un nouveau champ. (une issue a été ouverte sur le package biblatex pour l'ajout d'un champ issuetitleaddon).
 * Trouver le moyen que la mention d'édition s'affiche correctement (1\up{e} edition}
 * S'arranger pour qu'il n'affiche pas les informations qui ne sont pas sencées figurer (ex : langue)
 * Choisir le bon style de la famille verbose (trad1, 2 ou 3) pour la gestion des abbréviations de type op.cit. la plus proche de celui de la FIAL. Si besoin, redéfinir des macros pour que ça corresponde parfaitement. Les macros se trouvent dans cbx (/usr/local/texlive/2019/texmf-dist/tex/latex/biblatex/cbx/). Il y a encore un truc à lire dans le latex sciences humaines là-dessus (à la toute fin de la personnalisation des styles).
