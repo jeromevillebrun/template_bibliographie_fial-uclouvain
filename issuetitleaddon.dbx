@@ -1,0 +1,4 @@
+\ProvidesFile{issuetitleaddon.dbx}[2020/04/14 issuetitleaddon]
+
+\DeclareDatamodelFields[type=field,datatype=literal]{issuetitleaddon}
+\DeclareDatamodelEntryfields[article,periodical]{issuetitleaddon}
