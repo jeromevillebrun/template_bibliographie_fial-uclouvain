@@ -12,6 +12,7 @@ Un template LaTeX avec une page de garde ainsi que le style de bibliographie et 
 @article
 
 * `issuetitle` et `issuesubtitle`, spécifie le titre du numéro spécial ou du dossier thématique.
+* `issuetitleaddon` spécifie la mention du type de numéro spécial telle qu'affichée sur la page de titre (ex : "dossier thématique", "numéro spécial", etc.). C'est un champ inventé pour l'occasion (pas un champ intégré de base à biblatex). Il faut donc systématiquement l'ajouter pour chaque entrée de type @article ou @periodical s'il figure sur la page de titre.
 
 ### Citer dans le texte
 

@@ -101,6 +101,20 @@
   \usebibmacro{date}%
   \newunit}
 
+\renewbibmacro*{issue}{%
+  \ifboolexpr{
+    test {\iffieldundef{issuetitle}}
+    and
+    test {\iffieldundef{issuesubtitle}}
+  }
+    {}
+    {\printtext[issuetitle]{%
+       \printfield[titlecase]{issuetitle}%
+       \setunit{\subtitlepunct}%
+       \printfield[titlecase]{issuesubtitle}}}%
+  \setunit{\addcomma\space}
+  \printfield{issuetitleaddon}}
+
 \DeclareBibliographyDriver{book}{%
   \usebibmacro{bibindex}%
   \usebibmacro{begentry}%
