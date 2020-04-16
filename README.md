@@ -13,6 +13,12 @@ Un template LaTeX avec une page de garde ainsi que le style de bibliographie et 
 
 @book
 
+* `edition` indique la mention d'édition. Si c'est un chiffre, biblatex l'indiquera automatiquement sous la forme "2e éd." (avec le "e" en exposant). Il est aussi possible de l'indiquer sous forme littérale (par exemple "2e édition revue et corrigée"). Dans ce cas, on met le "e" en exposant avec la commande `\up{e}`.
+
+@mvbook
+
+Pour citer un volume particulier d'une monographie en plusieurs volumes.
+
 * `volume` pour indiquer le numéro de tome/volume utilisé quand vous citez un volume particulier d'un ouvrage qui en est fait de plusieurs. Si vous mettez seulement le numéro, latex ajoutera automatiquement la mention "t.". Si vous ajouter la mention "vol." (ou toute autre chaine de caractère), latex imprimera la chaine telle quelle.
 * `maintitle` et `mainsubtitle` doivent être utilisés dans ce même cas pour spécifier le titre de l'ensemble.
 * `title` sera utilisé pour le titre du volume cité.
