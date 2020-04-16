@@ -13,7 +13,7 @@ Un template LaTeX avec une page de garde ainsi que le style de bibliographie et 
 
 @book
 
-* `edition` indique la mention d'édition. Si c'est un chiffre, biblatex l'indiquera automatiquement sous la forme "2e éd." (avec le "e" en exposant). Il est aussi possible de l'indiquer sous forme littérale (par exemple "2e édition revue et corrigée"). Dans ce cas, on met le "e" en exposant avec la commande `\up{e}`.
+* `edition` indique la mention d'édition. Si c'est un chiffre, biblatex l'indiquera automatiquement sous la forme "2e éd." (avec le "e" en exposant). Il est aussi possible de l'indiquer sous forme littérale (par exemple "2e édition revue et corrigée"). Dans ce cas, on met le "e" en exposant avec la commande `\up{e}`. Pour rappel, c'est aussi dans ce champ que l'on peut spécifier la mention "réimpr. anast." si l'on a affaire à une réimpression anastatique.
 
 @mvbook
 
