@@ -58,6 +58,7 @@
 \DeclareFieldFormat{issuetitle}{\mkbibquote{#1}}
 \DeclareFieldFormat{url}{\url{#1}}
 \DeclareFieldFormat[online]{title}{\mkbibquote{#1\isdot}}
+\DeclareFieldFormat{volume}{\ifnumerals{#1}{\bibstring{volume}~#1}{#1}}% Si le champ volume est un nombre, il ajoute automatiquement t. Si l'utilisateur a ajouté une chaine de caractère, il n'ajoute rien lui-même (pour spécifier si c'est un  volume ou un tome).
 
 \renewbibmacro*{publisher+location+date}{%
   \printlist{location}%
