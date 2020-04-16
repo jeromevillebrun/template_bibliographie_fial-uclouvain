@@ -11,6 +11,13 @@ Un template LaTeX avec une page de garde ainsi que le style de bibliographie et 
 
 [Ce blog](https://serialmentor.com/blog/2015/10/2/Bibtex) donne des pistes pour vérifier que les données trouvées sur internet au format BibTeX sont correctes.
 
+@book
+
+* `volume` pour indiquer le numéro de tome/volume utilisé quand vous citez un volume particulier d'un ouvrage qui en est fait de plusieurs. Si vous mettez seulement le numéro, latex ajoutera automatiquement la mention "t.". Si vous ajouter la mention "vol." (ou toute autre chaine de caractère), latex imprimera la chaine telle quelle.
+* `maintitle` et `mainsubtitle` doivent être utilisés dans ce même cas pour spécifier le titre de l'ensemble.
+* `title` sera utilisé pour le titre du volume cité.
+* NB : Dans ces cas, il est préférable d'utiliser `@mvbook`, qui est l'entrée parfaitement adaptée. Elle aura exactement le même comportement que `@book`.
+
 @article
 
 * `issuetitle` et `issuesubtitle`, spécifie le titre du numéro spécial ou du dossier thématique. Ils sont rarement repris dans les bases de données en ligne.
