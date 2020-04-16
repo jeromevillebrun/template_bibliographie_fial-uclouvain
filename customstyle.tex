@@ -127,9 +127,9 @@
   \newunit\newblock
   \usebibmacro{byauthor}%
   \newunit\newblock
+  \printfield{edition}%inversé byeditors+others et edition pour avoir "2e éd. trad. du russe par"
+  \setunit{\addspace}%à la place de \newunit\newblock
   \usebibmacro{byeditor+others}%
-  \newunit\newblock
-  \printfield{edition}%
   \newunit
   \iffieldundef{maintitle}
     {\printfield{volume}%
