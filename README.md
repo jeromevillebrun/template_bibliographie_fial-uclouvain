@@ -31,8 +31,9 @@ Pour citer un volume en particulier d'une monographie en plusieurs volumes. `@bo
 
 Pour les thèses et les mémoires.
 
-* Le type de thèse
+* `institution` est utilisé pour le nom de l'université.
 * `date` doit être impérativement utilisé pour l'année scolaire (date doit toujours être privilégié à `year` de toute façon. Ex : "date = {2019/2020}". Il faut absolument utiliser le "/" et non "-", qui sera mis automatiquement dans le document. Cela pourrait poser des problèmes dans le tri de la bibliographie, si celui-ci est fait par dates.
+* `type` est utilisé pour la mention obligatoire "Mémoire de maîtrise en Histoire" en fin de référence. Il peut être imprimé tel quel, ou on peut aussi utiliser une *localisation key* (voir section 4.9.2.13 de la documentation biblatex).
 
 @article
 
