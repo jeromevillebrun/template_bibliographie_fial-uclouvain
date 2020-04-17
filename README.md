@@ -32,6 +32,7 @@ Pour citer un volume en particulier d'une monographie en plusieurs volumes. `@bo
 Pour les thèses et les mémoires.
 
 * Le type de thèse
+* `date` doit être impérativement utilisé pour l'année scolaire (date doit toujours être privilégié à `year` de toute façon. Ex : "date = {2019/2020}". Il faut absolument utiliser le "/" et non "-", qui sera mis automatiquement dans le document. Cela pourrait poser des problèmes dans le tri de la bibliographie, si celui-ci est fait par dates.
 
 @article
 
