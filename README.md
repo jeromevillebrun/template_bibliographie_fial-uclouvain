@@ -13,6 +13,8 @@ Un template LaTeX avec une page de garde ainsi que le style de bibliographie et 
 
 @book
 
+Pour les monographies.
+
 * `edition` indique la mention d'édition. Si c'est un chiffre, biblatex l'indiquera automatiquement sous la forme "2e éd." (avec le "e" en exposant). Il est aussi possible de l'indiquer sous forme littérale (par exemple "2e édition revue et corrigée"). Dans ce cas, on met le "e" en exposant avec la commande `\up{e}`. Pour rappel, c'est aussi dans ce champ que l'on peut spécifier la mention "réimpr. anast." si l'on a affaire à une réimpression anastatique. On peut également y spécifier des mentions apparaissant sur la page de titre comme "trad. du russe par Prénom Nom"
 * `series` pour la collection. C'est un champ par défaut de biblatex, de type "litteral string" : il est imprimé tel quel. Si l'ouvrage est dans plusieurs collections, il faut donc les séparer par des "/" soi-même.
 
@@ -24,6 +26,12 @@ Pour citer un volume en particulier d'une monographie en plusieurs volumes. `@bo
 * `volumes` pour le nombre de tomes/volumes de l'ouvrage entier. Celui-là doit toujours être un nombre, sous peine de se retrouver avec une mention double : "4 vol. vol.".
 * `maintitle` et `mainsubtitle` doivent être utilisés dans ce même cas pour spécifier le titre de l'ensemble.
 * `title` sera utilisé pour le titre spécifique au volume cité s'il en a un.
+
+@thesis
+
+Pour les thèses et les mémoires.
+
+* Le type de thèse
 
 @article
 
