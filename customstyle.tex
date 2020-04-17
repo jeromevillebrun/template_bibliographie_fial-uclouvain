@@ -37,7 +37,8 @@
 \DefineBibliographyStrings{french}{%
 	in = {dans},%
 	andothers = {e\adddot a\adddot},%
-	urlseen = {consulté le}%
+	urlseen = {consulté le},%
+	nodate = {s\adddot d\adddot}%
 }
 
 
@@ -73,8 +74,6 @@
   \usebibmacro{date}%
   \newunit
 }
-
-\newbibmacro*{date}{\iffieldundef{date}{\printtext{s\adddot d\adddot}}{\printdate}}
 
 \renewbibmacro*{series+number}{%
   \iffieldundef{series}
