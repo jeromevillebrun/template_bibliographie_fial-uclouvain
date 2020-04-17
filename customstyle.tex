@@ -62,7 +62,8 @@
 \DeclareFieldFormat{volume}{\ifnumerals{#1}{\bibstring{volume}~#1}{#1}}% Si le champ volume est un nombre, il ajoute automatiquement t. Si l'utilisateur a ajouté une chaine de caractère, il n'ajoute rien lui-même (pour spécifier si c'est un  volume ou un tome).
 
 \renewbibmacro*{publisher+location+date}{%
-  \printlist{location}%
+  \setunit*{\addcomma\space}%
+  \iflistundef{location}{\printtext{s\adddot l\adddot}}{\printlist{location}}
   \iflistundef{publisher}
     {\setunit*{\addcomma\space}}
     {\setunit*{\addcomma\space}}%remplacé collon par comma
