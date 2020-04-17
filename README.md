@@ -17,12 +17,12 @@ Un template LaTeX avec une page de garde ainsi que le style de bibliographie et 
 
 @mvbook
 
-Pour citer un volume particulier d'une monographie en plusieurs volumes.
+Pour citer un volume en particulier d'une monographie en plusieurs volumes. `@book` aura exactement le même comportement que `@mvbook`, même dans ce cas, mais `@mvbook` est l'entrée qui est faite pour, et c'est une bonne pratique que de l'utiliser (pour des raisons de tri dans les bibliographies).
 
-* `volume` pour indiquer le numéro de tome/volume utilisé quand vous citez un volume particulier d'un ouvrage qui en est fait de plusieurs. Si vous mettez seulement le numéro, latex ajoutera automatiquement la mention "t.". Si vous ajouter la mention "vol." (ou toute autre chaine de caractère), latex imprimera la chaine telle quelle.
+* `volume` pour indiquer le numéro de tome/volume utilisé. Si vous mettez seulement un numéro, latex ajoutera automatiquement la mention "t.". Si vous ajouter la mention "vol." (ou toute autre chaine de caractère), latex imprimera le champ tel quel.
+* `volumes` pour le nombre de tomes/volumes de l'ouvrage entier. Celui-là doit toujours être un nombre, sous peine de se retrouver avec une mention double : "4 vol. vol.".
 * `maintitle` et `mainsubtitle` doivent être utilisés dans ce même cas pour spécifier le titre de l'ensemble.
-* `title` sera utilisé pour le titre du volume cité.
-* NB : Dans ces cas, il est préférable d'utiliser `@mvbook`, qui est l'entrée parfaitement adaptée. Elle aura exactement le même comportement que `@book`.
+* `title` sera utilisé pour le titre spécifique au volume cité s'il en a un.
 
 @article
 
