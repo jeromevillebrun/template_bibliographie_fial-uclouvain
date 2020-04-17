@@ -23,7 +23,7 @@ Pour les monographies.
 Pour citer un volume en particulier d'une monographie en plusieurs volumes. `@book` aura exactement le même comportement que `@mvbook`, même dans ce cas, mais `@mvbook` est l'entrée qui est faite pour, et c'est une bonne pratique que de l'utiliser (pour des raisons de tri dans les bibliographies).
 
 * `volume` pour indiquer le numéro de tome/volume utilisé. Si vous mettez seulement un numéro, latex ajoutera automatiquement la mention "t.". Si vous ajouter la mention "vol." (ou toute autre chaine de caractère), latex imprimera le champ tel quel.
-* `volumes` pour le nombre de tomes/volumes de l'ouvrage entier. Celui-là doit toujours être un nombre, sous peine de se retrouver avec une mention double : "4 vol. vol.".
+* `volumes` pour le nombre de tomes/volumes de l'ouvrage entier. Même chose que pour le précédent : si on ne met que le chiffre, il ajoute automatiquement "t." ; si on ajoute "vol.", il imprime le champ tel quel.
 * `maintitle` et `mainsubtitle` doivent être utilisés dans ce même cas pour spécifier le titre de l'ensemble.
 * `title` sera utilisé pour le titre spécifique au volume cité s'il en a un.
 

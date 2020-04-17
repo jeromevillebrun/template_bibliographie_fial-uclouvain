@@ -65,7 +65,7 @@
 \DeclareFieldFormat{type}{\mkbibbrackets{\ifbibstring{#1}{\bibstring{#1}}{#1}}}%C'est pour les @thesis
 
 \DeclareFieldFormat{volume}{\ifnumerals{#1}{\bibstring{volume}~#1}{#1}}% Si le champ volume est un nombre, il ajoute automatiquement t. Si l'utilisateur a ajouté une chaine de caractère, il n'ajoute rien lui-même (pour spécifier si c'est un  volume ou un tome).
-\DeclareFieldFormat{volumes}{\ifnumerals{volume}{#1~\bibstring{volumes}}{#1~vol\adddot}}%Même concept que le précédent
+\DeclareFieldFormat{volumes}{\ifnumerals{volumes}{#1~\bibstring{volumes}}{#1~vol\adddot}}%Même concept que le précédent
 
 \DeclareBibliographyDriver{thesis}{%
   \usebibmacro{bibindex}%
