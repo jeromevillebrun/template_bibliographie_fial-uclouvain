@@ -59,7 +59,10 @@
 \renewcommand{\editortypedelim}{\addspace} %enlève la virgule qu'il y a avant la pentite mention "éd."
 \DeclareFieldFormat{issuetitle}{\mkbibquote{#1}}
 \DeclareFieldFormat{url}{\url{#1}}
+
 \DeclareFieldFormat[online]{title}{\mkbibquote{#1\isdot}}
+\DeclareFieldFormat[thesis]{title}{\mkbibemph{#1}}
+
 \DeclareFieldFormat{volume}{\ifnumerals{#1}{\bibstring{volume}~#1}{#1}}% Si le champ volume est un nombre, il ajoute automatiquement t. Si l'utilisateur a ajouté une chaine de caractère, il n'ajoute rien lui-même (pour spécifier si c'est un  volume ou un tome).
 \DeclareFieldFormat{volumes}{\ifnumerals{volume}{#1~\bibstring{volumes}}{#1~vol\adddot}}%Même concept que le précédent
 
