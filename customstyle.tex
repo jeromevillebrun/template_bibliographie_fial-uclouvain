@@ -73,6 +73,8 @@
   \newunit
 }
 
+\newbibmacro*{date}{\iffieldundef{date}{\printtext{s\adddot d\adddot}}{\printdate}}
+
 \renewbibmacro*{series+number}{%
   \iffieldundef{series}
     {}
