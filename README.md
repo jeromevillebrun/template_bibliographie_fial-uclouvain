@@ -37,7 +37,11 @@ Pour les thèses et les mémoires.
 
 @proceedings
 
-Pour citer les actes d'un colloque. Se comporte exactement comme @book.
+Pour les actes d'un colloque. Se comporte exactement comme @book.
+
+@reference
+
+Pour les dictionnaires, les bibliographies ou les encyclopédies.
 
 @article
 
