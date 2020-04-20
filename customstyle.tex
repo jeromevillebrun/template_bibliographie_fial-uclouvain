@@ -232,6 +232,11 @@
   \setunit{\printdelim{nametitledelim}}\newblock
   \usebibmacro{maintitle+title}%
   \newunit
+  \iffieldundef{maintitle}
+    {\printfield{volume}%
+     \printfield{part}}
+    {}%
+  \newunit
   \printlist{language}%
   \newunit\newblock
   \usebibmacro{byauthor}%
@@ -239,11 +244,6 @@
   \printfield{edition}%inversé byeditors+others et edition pour avoir "2e éd. trad. du russe par"
   \setunit{\addspace}%à la place de \newunit\newblock
   \usebibmacro{byeditor+others}%
-  \newunit
-  \iffieldundef{maintitle}
-    {\printfield{volume}%
-     \printfield{part}}
-    {}%
   \newunit\newblock
   \printfield{note}%
   \newunit\newblock
