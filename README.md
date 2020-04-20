@@ -9,7 +9,7 @@ Un template LaTeX avec une page de garde ainsi que le style de bibliographie et 
 
 #### Les titres
 
-La documentation de biblatex paragraphe 2.2.2 répertorie tous les champs définis. Il existe différents titres. Il est important de bien les comprendre pour être capable de gérer aisément des cas complexes.
+La documentation de biblatex paragraphe 2.2.2 répertorie tous les champs définis. Il en existe plusieurs pour les titres. Il est important de bien les comprendre pour être capable de gérer aisément des cas complexes.
 
 * `title` : le titre de l'élément que l'on veut référencer.
 * `maintitle` : lorsque l'on a un publication en plusieurs volumes, on renseigne le titre de l'ensemble dans ce champ.
