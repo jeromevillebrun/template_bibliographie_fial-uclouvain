@@ -60,7 +60,7 @@
 \DeclareFieldFormat{issuetitle}{\mkbibquote{#1}}
 \DeclareFieldFormat{url}{\url{#1}}
 
-\DeclareFieldFormat[online]{title}{\mkbibquote{#1\isdot}}
+\DeclareFieldFormat[online,inreference]{title}{\mkbibquote{#1\isdot}}
 \DeclareFieldFormat[thesis]{title}{\mkbibemph{#1}}
 \DeclareFieldFormat{type}{\mkbibbrackets{\ifbibstring{#1}{\bibstring{#1}}{#1}}}%C'est pour les @thesis
 
@@ -70,6 +70,7 @@
 \DeclareBibliographyAlias{proceedings}{book}
 \DeclareBibliographyAlias{collection}{book}
 \DeclareBibliographyAlias{inproceedings}{incollection}
+\DeclareBibliographyAlias{inreference}{incollection}
 
 \DeclareBibliographyDriver{incollection}{%
   \usebibmacro{bibindex}%
