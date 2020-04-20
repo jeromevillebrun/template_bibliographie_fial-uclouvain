@@ -85,13 +85,13 @@
   \usebibmacro{in:}%
   \ifnameundef{editor}{}{\usebibmacro{editor+others}\setunit{\addcomma\space}}%pour que l'affichage de l'éditeur (éd.)
   \usebibmacro{maintitle+booktitle}%
-  \newunit\newblock
-  \printfield{edition}%
   \newunit
   \iffieldundef{maintitle}
     {\printfield{volume}%
      \printfield{part}}
     {}%
+  \newunit\newblock
+  \printfield{edition}%
   \newunit
   \printfield{volumes}%
   \newunit\newblock
