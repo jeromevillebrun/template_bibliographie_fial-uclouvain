@@ -7,6 +7,14 @@ Un template LaTeX avec une page de garde ainsi que le style de bibliographie et 
 
 #### Où trouver les données bibliographiques
 
+#### Les titres
+
+La documentation de biblatex paragraphe 2.2.2 répertorie tous les champs définis. Il existe différents titres. Il est important de bien les comprendre pour être capable de gérer aisément des cas complexes.
+
+* `title` : le titre de l'élément que l'on veut référencer.
+* `maintitle` : lorsque l'on a un publication en plusieurs volumes, on renseigne le titre de l'ensemble dans ce champ.
+* `booktitle` : si `title` indique le titre d'un travail qui fait partie d'une publication plus grande, on indique dans `booktitle` le titre de cette publication. Par exemple, lorsque l'on cite un article d'ouvrage collectif, on y indique le titre de l'ouvrage collectif. Cependant, si cet ouvrage collectif est en plusieurs volumes, `booktitle` sera destiné à accueillir le titre du volume dans lequel se trouve l'article.
+
 #### Les champs pour chaque type d'entrées (vérifier les données bibliographiques)
 
 [Ce blog](https://serialmentor.com/blog/2015/10/2/Bibtex) donne des pistes pour vérifier que les données trouvées sur internet au format BibTeX sont correctes.
@@ -35,9 +43,13 @@ Pour les thèses et les mémoires.
 * `date` doit être impérativement utilisé pour l'année scolaire (date doit toujours être privilégié à `year` de toute façon. Ex : "date = {2019/2020}". Il faut absolument utiliser le "/" et non "-", qui sera mis automatiquement dans le document. Cela pourrait poser des problèmes dans le tri de la bibliographie, si celui-ci est fait par dates.
 * `type` est utilisé pour la mention obligatoire "Mémoire de maîtrise en Histoire" en fin de référence. Il peut être imprimé tel quel, ou on peut aussi utiliser une *localisation key* (voir section 4.9.2.13 de la documentation biblatex).
 
-@proceedings
+@collection
 
-Pour les actes d'un colloque. Se comporte exactement comme @book.
+Pour les ouvrages collectifs. Utiliser `@proceedings` pour les actes d'un colloque. Les deux se comportent exactement comme @book.
+
+@incollection
+
+Pour un article d'ouvrage collectif.
 
 @reference
 
