@@ -68,6 +68,8 @@
 \DeclareFieldFormat{volumes}{\ifnumerals{volumes}{#1~\bibstring{volumes}}{#1~vol\adddot}}%Même concept que le précédent
 
 \DeclareBibliographyAlias{proceedings}{book}
+\DeclareBibliographyAlias{collection}{book}
+\DeclareBibliographyAlias{inproceedings}{incollection}
 
 \DeclareBibliographyDriver{thesis}{%
   \usebibmacro{bibindex}%
