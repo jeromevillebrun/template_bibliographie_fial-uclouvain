@@ -83,9 +83,8 @@
   \usebibmacro{byauthor}%
   \newunit\newblock
   \usebibmacro{in:}%
+  \ifnameundef{editor}{}{\usebibmacro{editor+others}\setunit{\addcomma\space}}%pour que l'affichage de l'éditeur (éd.)
   \usebibmacro{maintitle+booktitle}%
-  \newunit\newblock
-  \usebibmacro{byeditor+others}%C'est là qu'est le "sous la dir. de"
   \newunit\newblock
   \printfield{edition}%
   \newunit
