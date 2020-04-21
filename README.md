@@ -7,6 +7,8 @@ Un template LaTeX avec une page de garde ainsi que le style de bibliographie et 
 
 #### Où trouver les données bibliographiques
 
+[Ce blog](https://serialmentor.com/blog/2015/10/2/Bibtex) donne des pistes pour vérifier que les données trouvées sur internet au format BibTeX sont correctes.
+
 #### Les titres
 
 La documentation de biblatex paragraphe 2.2.2 répertorie tous les champs définis. Il en existe plusieurs pour les titres. Il est important de bien les comprendre pour être capable de gérer aisément des cas complexes.
@@ -17,13 +19,13 @@ La documentation de biblatex paragraphe 2.2.2 répertorie tous les champs défin
 
 #### Les champs pour chaque type d'entrées (vérifier les données bibliographiques)
 
-[Ce blog](https://serialmentor.com/blog/2015/10/2/Bibtex) donne des pistes pour vérifier que les données trouvées sur internet au format BibTeX sont correctes.
-
 @book
 
 Pour les monographies.
 
 * `edition` indique la mention d'édition. Si c'est un chiffre, biblatex l'indiquera automatiquement sous la forme "2e éd." (avec le "e" en exposant). Il est aussi possible de l'indiquer sous forme littérale (par exemple "2e édition revue et corrigée"). Dans ce cas, on met le "e" en exposant avec la commande `\up{e}`. Pour rappel, c'est aussi dans ce champ que l'on peut spécifier la mention "réimpr. anast." si l'on a affaire à une réimpression anastatique. On peut également y spécifier des mentions apparaissant sur la page de titre comme "trad. du russe par Prénom Nom"
+* `publisher` pour la maison d'édition.
+* `editor` pour l'éditeur scientifique. Normalement, on préfèrera choisir entre utiliser `editor` ou `author`, le comportement de biblatex n'étant peut-être pas celui attendu dans le cas où l'on utilise les deux champs à la fois.
 * `series` pour la collection. C'est un champ par défaut de biblatex, de type "litteral string" : il est imprimé tel quel. Si l'ouvrage est dans plusieurs collections, il faut donc les séparer par des "/" soi-même.
 
 @mvbook
@@ -40,27 +42,29 @@ Pour citer un volume en particulier d'une monographie en plusieurs volumes. `@bo
 Pour les thèses et les mémoires.
 
 * `institution` est utilisé pour le nom de l'université.
-* `date` doit être impérativement utilisé pour l'année scolaire (date doit toujours être privilégié à `year` de toute façon. Ex : "date = {2019/2020}". Il faut absolument utiliser le "/" et non "-", qui sera mis automatiquement dans le document. Cela pourrait poser des problèmes dans le tri de la bibliographie, si celui-ci est fait par dates.
+* `date` doit être impérativement utilisé pour l'année scolaire (date doit toujours être privilégié à `year` de toute façon quelque soit l'entrée. Ex : "date = {2019/2020}". Il faut absolument utiliser le "/" et non "-", qui sera mis automatiquement dans le document. L'utilisation du tiret n'est pas la bonne syntaxe et pourrait poser des problèmes dans le tri de la bibliographie, si celle-ci est trié par dates.
 * `type` est utilisé pour la mention obligatoire "Mémoire de maîtrise en Histoire" en fin de référence. Il peut être imprimé tel quel, ou on peut aussi utiliser une *localisation key* (voir section 4.9.2.13 de la documentation biblatex).
 
 @collection
 
-Pour les ouvrages collectifs. Utiliser `@proceedings` pour les actes d'un colloque. Les deux se comportent exactement comme @book.
+Il est destiné aux ouvrages collectifs, et se comporte exactement comme `@book`. Pour les articles d'ouvrages collectifs, utiliser `@incollection`.
 
-@incollection
+@proceedings
 
-Pour un article d'ouvrage collectif.
+Il est destiné aux actes de colloque, et se comporte exactement comme `@book`. Pour les articles d'actes de colloque, utiliser `@inproceedings`, qui se comporte exactement comme `@incollection`.
 
 @reference
 
-Pour les dictionnaires, les bibliographies ou les encyclopédies.
+Il est destiné aux dictionnaires, bibliographies et encyclopédies, et se comporte exactement comme `@book`. Pour les articles d'ouvrage de référence, utiliser `@inreference`, qui se comporte exactement comme `@incollection`.
 
 @article
 
 * `issuetitle` et `issuesubtitle`, spécifie le titre du numéro spécial ou du dossier thématique. Ils sont rarement repris dans les bases de données en ligne.
-* `issuetitleaddon` spécifie la mention du type de numéro spécial telle qu'affichée sur la page de titre (ex : "dossier thématique", "numéro spécial", etc.). C'est un champ inventé pour l'occasion (pas un champ intégré de base à biblatex). Il faut donc systématiquement l'ajouter pour chaque entrée de type @article ou @periodical s'il figure sur la page de titre.
+* `issuetitleaddon` spécifie la mention du type de numéro spécial telle qu'affichée sur la page de titre (ex : "dossier thématique", "numéro spécial", etc.). C'est un champ inventé pour l'occasion (pas un champ intégré de base à biblatex). Il faut donc systématiquement l'ajouter pour chaque entrée de type @article ou @periodical.
 
 ### Citer dans le texte
+
+Utiliser la commande `\autocite[prenote][postnote]{clé_de_citation}` pour citer un document du fichier `.bib`. Celle-ci créera une note de bas de page à l'endroit de la citation. On la préfère à `\footcite{}` puisqu'elle permet d'utiliser le même texte avec un autre style bibliographique (qui aurait comme option une citation en fin d'ouvrage, par exemple). `prenote` est un bout de texte à afficher avant la référence (comme par exemple "Cf.", mais aussi un texte plus long pour faire une note explicative). `postnote` est un bout de texte à afficher après la référence, par exemple pour préciser un numéro de page → le numéro seul suffit : le "p.~" est ajouté automatiquement si la postnote est un numéro.
 
 ### Compiler
 
@@ -81,7 +85,7 @@ Cependant, depuis l'ajout du fichier, `latexmkrc`, latexmk réalise la compilati
 
 ## Contribuer
 
-Le style bibliographique n'est pas du tout au point, et il est difficile de penser qu'il le sera un jour, vu l'étendue des ambiguités que présentent les “normes” bibliographiques de la FIAL (voir le fichier guide_references_bibliographiques.pdf). Toute aide et toute connaissance sur biblatex est la bienvenue (je suis pas un expert de LaTeX, j'essaye juste de me dépatouiller avec la [documentation](http://mirrors.ibiblio.org/CTAN/macros/latex/contrib/biblatex/doc/biblatex.pdf), mais ça n'est pas toujours évident).
+Les styles (bibliographiques et de citation) ne sont pas du tout au point. Toute aide et toute connaissance sur biblatex est la bienvenue (je suis pas un expert de LaTeX, j'essaye juste de me dépatouiller avec la [documentation](http://mirrors.ibiblio.org/CTAN/macros/latex/contrib/biblatex/doc/biblatex.pdf), mais ça n'est pas toujours évident).
 
 Pour contribuer :
 
@@ -100,7 +104,5 @@ Si vous désirez aider, mais que vous n'avez pas envie d'apprendre comment fonct
 Todolist :
 
 * Vérifier que l'affichage correspond aux consignes fial pour chaque type d'entrée possible.
-* changer les mots clés anglais (dans, op. cit, etc.)
-* Trouver le moyen que la mention d'édition s'affiche correctement (1\up{e} edition}
-* S'arranger pour qu'il n'affiche pas les informations qui ne sont pas sencées figurer (ex : langue)
 * Choisir le bon style de la famille verbose (trad1, 2 ou 3) pour la gestion des abbréviations de type op.cit. la plus proche de celui de la FIAL. Si besoin, redéfinir des macros pour que ça corresponde parfaitement. Les macros se trouvent dans cbx (/usr/local/texlive/2019/texmf-dist/tex/latex/biblatex/cbx/). Il y a encore un truc à lire dans le latex sciences humaines là-dessus (à la toute fin de la personnalisation des styles).
+* S'arranger pour qu'il n'affiche pas les informations qui ne sont pas sencées figurer dans certains types d'entrées (ex : langue).
