@@ -3,7 +3,7 @@ Un template LaTeX avec une page de garde ainsi que le style de bibliographie et 
 
 ## Utilisation
 
-L'utilisation d'[Overleaf](https://fr.overleaf.com/login) est recommandée. Il s'agit d'un éditeur LaTeX en ligne, gratuit, très user friendly et proposant plein de chouettes fonctionnalités (raccourcis clavier, synchronisation de la bibliographie avec Zotero ou Mendeley, autocomplétion très avancée, compilation automatique, etc.).
+L'utilisation d'[Overleaf](https://fr.overleaf.com/login) est recommandée. Il s'agit d'un éditeur LaTeX en ligne, très user friendly et proposant plein de chouettes fonctionnalités (raccourcis clavier, synchronisation de la bibliographie avec Zotero ou Mendeley, autocomplétion très avancée, compilation automatique, travail à plusieurs sur le même document, documentation vulgarisée sur LaTeX, etc.). Il suffit de créer un compte gratuit. Il n'est ainsi pas nécessaire d'installer LaTeX sur votre ordinateur. À ma connaissance, la seule raison de ne pas l'utiliser est si vous éprouvez régulièrement des difficultés à vous connecter à internet.
 
 ### Les titres
 
