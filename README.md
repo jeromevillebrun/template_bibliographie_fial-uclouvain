@@ -3,13 +3,11 @@ Un template LaTeX avec une page de garde ainsi que le style de bibliographie et 
 
 ## Utilisation
 
-### Entrer les données bibliographiques
-
-#### Où trouver les données bibliographiques
+### Où trouver les données bibliographiques
 
 [Ce blog](https://serialmentor.com/blog/2015/10/2/Bibtex) donne des pistes pour vérifier que les données trouvées sur internet au format BibTeX sont correctes.
 
-#### Les titres
+### Les titres
 
 La documentation de biblatex paragraphe 2.2.2 répertorie tous les champs définis. Il en existe plusieurs pour les titres. Il est important de bien les comprendre pour être capable de gérer aisément des cas complexes.
 
@@ -17,7 +15,7 @@ La documentation de biblatex paragraphe 2.2.2 répertorie tous les champs défin
 * `maintitle` : lorsque l'on a un publication en plusieurs volumes, on renseigne le titre de l'ensemble dans ce champ.
 * `booktitle` : si `title` indique le titre d'un travail qui fait partie d'une publication plus grande, on indique dans `booktitle` le titre de cette publication. Par exemple, lorsque l'on cite un article d'ouvrage collectif, on y indique le titre de l'ouvrage collectif. Cependant, si cet ouvrage collectif est en plusieurs volumes, `booktitle` sera destiné à accueillir le titre du volume dans lequel se trouve l'article.
 
-#### Les champs pour chaque type d'entrées (vérifier les données bibliographiques)
+### Les champs pour chaque type d'entrées (vérifier les données bibliographiques)
 
 @book
 
