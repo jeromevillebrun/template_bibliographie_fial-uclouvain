@@ -1,9 +1,31 @@
 # template_bibliographie_fial-uclouvain
 Un template LaTeX avec une page de garde ainsi que le style de bibliographie et de citation de la Faculté de philosophie, arts et lettres (UCLouvain), pour une utilisation avec LaTeX, réalisé avec le package biblatex.
 
+## Structure du document
+
+* `main.tex` est le fichier principal. Y sont appelés dans l'ordre tous les autres fichiers `.tex` avec la commande `\input{nomdufichier}` (il peut être bon d'utiliser un fichier différent pour chaque chapitre, plutôt que de tout écrire dans un énorme fichier).
+* `page_de_garde_fial.tex` est le fichier de la page de garde, à compléter avec les bonnes informations. Pour rendre possible l'utilisation de la police petites capitales en gras, il doit être compilé séparément, avec `pdflatex` (contrairement au reste du document qui doit être compilé avec `xelatex`). Sa compilation génère le pdf `page_de_garde_fial.pdf` que `main.tex` intègre au document final.
+* `bibliographie.tex` est le fichier où se trouvent les commandes d'impression de la bibliographie (ou bien la bibliographie en tant que telle, si elle est réalisée à la main).
+* `bibdata.bib` est le fichier contenant les données bibliographiques brutes au format biblatex (ou bibtex). Ces données sont traitées par latex pour être présentées selon le style de la FIAL.
+
+Autres fichiers...
+* `preambule.tex`. En latex, le préambule est l'ensemble des commandes qui se trouvent avant le `\begin{document}` : appels de packages ainsi que réglages à appliquer au document.
+* `customstyle.tex`. Le fichier de personnalisation du style bibliographique et du style de citation. C'est une partie du préambule.
+* `issuetitleaddon.dbx`. Nouveau champ personnalisé `issuetitleaddon` (destiné aux articles de revue).
+
+Fichiers auxiliaires (peuvent être supprimés)...
+* `LICENCE`. La licence de ce dépôt. Je m'y connais pas trop en licence, donc si vous pensez qu'il y a un problème avec la licence, ouvrez une issue.
+* `guide_references_bibliographiques.pdf`. Le guide bibliographique et typographique de la FIAL, pour servir de référence éventuelle aux contributeurs.
+* `.gitignore`. Pour faciliter la vie aux contributeurs qui utilisent git.
+* `README.md`. Ce fichier.
+* `matexmkrc` Les instructions (machine) de compilation pour Overleaf.
+
+
 ## Utilisation
 
-L'utilisation d'[Overleaf](https://fr.overleaf.com/login) est recommandée. Il s'agit d'un éditeur LaTeX en ligne, très user friendly et proposant plein de chouettes fonctionnalités (raccourcis clavier, synchronisation de la bibliographie avec Zotero ou Mendeley, autocomplétion très avancée, compilation automatique, travail à plusieurs sur le même document, documentation vulgarisée sur LaTeX, etc.). Il suffit de créer un compte gratuit. Il n'est ainsi pas nécessaire d'installer LaTeX sur votre ordinateur. À ma connaissance, la seule raison de ne pas l'utiliser est si vous éprouvez régulièrement des difficultés à vous connecter à internet.
+L'utilisation d'[Overleaf](https://fr.overleaf.com/login) est recommandée. Il s'agit d'un éditeur LaTeX en ligne, très user friendly et proposant plein de chouettes fonctionnalités (correction orthographique, raccourcis clavier, synchronisation de la bibliographie avec Zotero ou Mendeley, autocomplétion très avancée, compilation automatique, travail à plusieurs sur le même document, historique des modifications, documentation vulgarisée sur LaTeX, etc.). Il suffit de créer un compte gratuit. Il n'est ainsi pas nécessaire d'installer LaTeX sur votre ordinateur. À ma connaissance, la seule raison de ne pas l'utiliser est si vous éprouvez régulièrement des difficultés à vous connecter à internet.
+
+Il faut compiler avec xelatex (sur overleaf, changer le compilateur dans le menu).
 
 ### Les titres
 
