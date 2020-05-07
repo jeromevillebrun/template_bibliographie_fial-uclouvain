@@ -3,6 +3,8 @@ Un template LaTeX avec une page de garde ainsi que le style de bibliographie et 
 
 ## Utilisation
 
+L'utilisation d'[Overleaf](https://fr.overleaf.com/login) est recommandée. Il s'agit d'un éditeur LaTeX en ligne, gratuit, très user friendly et proposant plein de chouettes fonctionnalités (raccourcis clavier, synchronisation de la bibliographie avec Zotero ou Mendeley, autocomplétion très avancée, compilation automatique, etc.).
+
 ### Les titres
 
 La documentation de biblatex paragraphe 2.2.2 répertorie tous les champs définis. Il en existe plusieurs pour les titres. Il est important de bien les comprendre pour être capable de gérer aisément des cas complexes.
