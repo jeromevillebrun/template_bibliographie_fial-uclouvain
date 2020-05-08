@@ -13,12 +13,13 @@
 \usepackage{enumitem} %nécessaire pour personnaliser la forme des listes
 
 %Packages "en plus"
-\usepackage{lettrine} %pour faire une première lettre géante
-\usepackage{oldgerm} %pour une lettrine stylisée
+%\usepackage{lettrine} %pour faire une première lettre géante
+%\usepackage{oldgerm} %pour une lettrine stylisée
 \usepackage[babel]{csquotes} %commande \enquote{} un texte entre «“”»
 \usepackage[final]{pdfpages} %pour ajouter page_de_garde_fial.pdf (\includepdf)
 
 %Réglages
 \setlist[itemize]{label=\textbullet} %utilise bullet point pour les listes
+\renewcommand{\%}{\unskip\nobreakspace\char37} %espace insécable après le %
 
 \input{customstyle.tex}
