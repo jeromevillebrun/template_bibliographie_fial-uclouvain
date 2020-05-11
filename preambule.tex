@@ -17,9 +17,10 @@
 %\usepackage{oldgerm} %pour une lettrine stylisée
 \usepackage[babel]{csquotes} %commande \enquote{} un texte entre «“”»
 \usepackage[final]{pdfpages} %pour ajouter page_de_garde_fial.pdf (\includepdf)
+\usepackage{xspace} %commande xspace automatique après le pourcent
 
 %Réglages
 \setlist[itemize]{label=\textbullet} %utilise bullet point pour les listes
-\renewcommand{\%}{\unskip\nobreakspace\char37\space} %espace insécable après le %
+\renewcommand{\%}{\unskip\nobreakspace\char37\xspace} %espace insécable après le %
 
 \input{customstyle.tex}
