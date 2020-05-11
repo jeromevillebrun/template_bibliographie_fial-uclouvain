@@ -102,6 +102,7 @@ Cependant, depuis l'ajout du fichier, `latexmkrc`, latexmk réalise la compilati
 * Sur git et LaTeX : https://github.com/dspinellis/latex-advice#use-third-party-latex-packages
 * Sur l'intérêt de versionner ses travaux : https://geekographie.maieul.net/83
 * Un excellent livre sur l'utilisation de LaTeX dans les sciences humaines. Disponible à cette adresse : https://geekographie.maieul.net/95. Notez qu'il n'est pas nécessaire de connaître tout sur tout de LaTeX (c'est impossible) pour pouvoir baliser son texte : les commandes de base suffisent et elles sont vraiment peu nombreuses. Il convient donc de ne pas se décourager face aux 300 pages de ce livre qu'il n'est pas nécessaire de lire en entier.
+* Une espace insécable est une espace qui ne peut pas être coupé pour faire un retour à la ligne. Lors de la compilation, LaTeX insère automatiquement les espaces insécables pour les signes de ponctuation qui en demandent. Je me suis arrangé pour qu'il en ajoute aussi avant la commande `\%`. Cependant, tout ne pourra jamais être automatisé, et dans de nombreux cas, il faut penser soi-même à les insérer, avec le tilde : `~`. Par exemple, on doit écrire `Louis~XVI` et non `Louis XVI`, au risque de numéro dynastique sur la ligne suivante. [Cette page](https://www.druide.com/fr/enquetes/pour-des-espaces-insecables-impeccables) donne les cas où il faut placer une espace insécable.
 
 ## Contribuer
 
