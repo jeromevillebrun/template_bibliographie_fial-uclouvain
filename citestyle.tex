@@ -21,3 +21,10 @@
   \printtext[bibhyperlink]{%
     \printfield[citetitle]{labeltitle}}}
 
+
+\renewbibmacro*{cite:opcit}{%
+  \printnames{labelname}%
+  \setunit*{\printdelim{nametitledelim}}%
+  \printtext[bibhyperlink]{%
+    \bibstring[\mkibid]{opcit}}}
+
