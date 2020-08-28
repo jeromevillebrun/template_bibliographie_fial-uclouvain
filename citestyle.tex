@@ -1,0 +1,23 @@
+\renewbibmacro*{cite}{%
+  \usebibmacro{cite:citepages}%
+  \global\togglefalse{cbx:loccit}%
+  \ifciteseen
+    {\ifciteibid
+       {\ifloccit
+          {\usebibmacro{cite:ibid}}
+          {\iffieldundef{shorthand}
+             {\usebibmacro{cite:opcit}}
+             {\usebibmacro{cite:shorthand}}}}
+       {\iffieldundef{shorthand}
+          {\usebibmacro{cite:short}}
+          {\usebibmacro{cite:shorthand}}}}
+    {\usebibmacro{cite:full}}}
+
+
+%la macro qui est utilisée quand la citation a été déjà vue, mais pas juste avant (op. cit.)
+\renewbibmacro*{cite:short}{%
+  \printnames{labelname}%
+  \setunit*{\printdelim{nametitledelim}}%
+  \printtext[bibhyperlink]{%
+    \printfield[citetitle]{labeltitle}}}
+
