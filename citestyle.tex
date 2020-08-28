@@ -28,3 +28,8 @@
   \printtext[bibhyperlink]{%
     \bibstring[\mkibid]{opcit}}}
 
+
+\renewbibmacro*{cite:ibid}{%
+  \printtext[bibhyperlink]{\bibstring[\mkibid]{ibidem}}%
+  \global\toggletrue{cbx:loccit}}
+
