@@ -1,40 +1,40 @@
-\renewbibmacro*{cite}{%
-  \usebibmacro{cite:citepages}%
-  \global\togglefalse{cbx:loccit}%
-  \ifciteseen
-    {\ifciteibid
-       {\usebibmacro{cite:ibid}}
-       {\iffieldundef{shorthand}
-          {\usebibmacro{cite:opcit}}%macro opcit au lieu de short.
-          {\usebibmacro{cite:shorthand}}}}
-    {\usebibmacro{cite:full}}}
+%\renewbibmacro*{cite}{%
+%  \usebibmacro{cite:citepages}%
+%  \global\togglefalse{cbx:loccit}%
+%  \ifciteseen
+%    {\ifciteibid
+%       {\usebibmacro{cite:ibid}}
+%       {\iffieldundef{shorthand}
+%          {\usebibmacro{cite:opcit}}%macro opcit au lieu de short.
+%          {\usebibmacro{cite:shorthand}}}}
+%    {\usebibmacro{cite:full}}}
 
 
 %la macro qui est utilisée quand la citation a été déjà vue, mais pas juste avant (op. cit.)
-\renewbibmacro*{cite:short}{%
-  \printnames{labelname}%
-  \setunit*{\printdelim{nametitledelim}}%
-  \printtext[bibhyperlink]{%
-    \printfield[citetitle]{labeltitle}}}
+%\renewbibmacro*{cite:short}{%
+%  \printnames{labelname}%
+%  \setunit*{\printdelim{nametitledelim}}%
+%  \printtext[bibhyperlink]{%
+%    \printfield[citetitle]{labeltitle}}}
 
 
-\renewbibmacro*{cite:opcit}{%
-  \printnames{labelname}%
-  \setunit*{\printdelim{nametitledelim}}%
-  \printtext[bibhyperlink]{%
-    \bibstring[\mkibid]{opcit}}}
+%\renewbibmacro*{cite:opcit}{%
+%  \printnames{labelname}%
+%  \setunit*{\printdelim{nametitledelim}}%
+%  \printtext[bibhyperlink]{%
+%    \bibstring[\mkibid]{opcit}}}
 
 
-\renewbibmacro*{cite:ibid}{%
-  \printtext[bibhyperlink]{\bibstring[\mkibid]{ibidem}}%
-  \ifloccit
-    {\global\toggletrue{cbx:loccit}}%Ceci spécifie qu'on est dans un cas de loccit (référence à une même page). Il ne le fait désormais que si c'est effectivement un loccit (ifloccit).
-    {}}
+%\renewbibmacro*{cite:ibid}{%
+%  \printtext[bibhyperlink]{\bibstring[\mkibid]{ibidem}}%
+%  \ifloccit
+%    {\global\toggletrue{cbx:loccit}}%Ceci spécifie qu'on est dans un cas de loccit (référence à une même page). Il ne le fait désormais que si c'est effectivement un loccit (ifloccit).
+%    {}}
 
 
-\renewbibmacro*{cite:title}{%vient de verbose-trad2
-  \printtext[bibhyperlink]{%
-    \printfield[citetitle]{labeltitle}%
-    \setunit{\printdelim{nametitledelim}}%
-    \bibstring[\mkibid]{opcit}}}
+%\renewbibmacro*{cite:title}{%vient de verbose-trad2
+%  \printtext[bibhyperlink]{%
+%    \printfield[citetitle]{labeltitle}%
+%    \setunit{\printdelim{nametitledelim}}%
+%    \bibstring[\mkibid]{opcit}}}
 
