@@ -31,3 +31,10 @@
     {\global\toggletrue{cbx:loccit}}%Ceci spécifie qu'on est dans un cas de loccit (référence à une même page). Il ne le fait désormais que si c'est effectivement un loccit (ifloccit).
     {}}
 
+
+\renewbibmacro*{cite:title}{%
+  \printtext[bibhyperlink]{%
+    \printfield[citetitle]{labeltitle}%
+    \setunit{\printdelim{nametitledelim}}%
+    \bibstring[\mkibid]{opcit}}}
+
