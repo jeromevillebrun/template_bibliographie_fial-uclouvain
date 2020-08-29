@@ -3,11 +3,7 @@
   \global\togglefalse{cbx:loccit}%
   \ifciteseen
     {\ifciteibid
-       {\ifloccit
-          {\usebibmacro{cite:ibid}}
-          {\iffieldundef{shorthand}
-             {\usebibmacro{cite:ibid}}%macro ibid au lieu de opcit
-             {\usebibmacro{cite:shorthand}}}}
+       {\usebibmacro{cite:ibid}}
        {\iffieldundef{shorthand}
           {\usebibmacro{cite:opcit}}%macro opcit au lieu de short.
           {\usebibmacro{cite:shorthand}}}}
