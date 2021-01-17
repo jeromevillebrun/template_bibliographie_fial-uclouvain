@@ -1,11 +1,78 @@
-\renewbibmacro*{cite:full}{%
-  \usebibmacro{cite:full:citepages}%
-  \global\toggletrue{cbx:fullcite}%
-  \printtext[bibhypertarget]{%
-    \usedriver
-      {\DeclareNameAlias{sortname}{default}}
-      {\thefield{entrytype}}}%
-  \usebibmacro{shorthandintro}}
+% suppress title if only only work by labelname
+\renewbibmacro*{cite:title}{%
+  \printtext[bibhyperlink]{%
+    \ifsingletitle
+      {}
+      {\printfield[citetitle]{labeltitle}%
+       \setunit{\printdelim{titleopcitdelim}}}%
+    \bibstring[\mkibid]{opcit}}}
+
+% idem also for full citations
+\makeatletter
+\newcommand*{\ifnameidem}[1]{%
+  \ifciteidem
+    {\iffieldequalstr{labelnamesource}{#1}}
+    {\@secondoftwo}}
+
+\renewbibmacro*{author}{%
+  \ifboolexpr{
+    test \ifuseauthor
+    and
+    not test {\ifnameundef{author}}
+  }
+    {\ifnameidem{author}
+       {\bibstring[\mkibid]{idem\thefield{gender}}}
+       {\usebibmacro{bbx:dashcheck}
+          {\bibnamedash}
+          {\printnames{author}%
+           \setunit{\printdelim{authortypedelim}}%
+           \usebibmacro{bbx:savehash}}}%
+     \usebibmacro{authorstrg}}
+    {\global\undef\bbx@lasthash}}
+
+\renewbibmacro*{bbx:editor}[1]{%
+  \ifboolexpr{
+    test \ifuseeditor
+    and
+    not test {\ifnameundef{editor}}
+  }
+    {\ifnameidem{editor}
+       {\bibstring[\mkibid]{idem\thefield{gender}}}
+       {\usebibmacro{bbx:dashcheck}
+          {\bibnamedash}
+          {\printnames{editor}%
+           \setunit{\printdelim{editortypedelim}}%
+           \usebibmacro{bbx:savehash}}}%
+     \usebibmacro{#1}%
+     \clearname{editor}}
+    {\global\undef\bbx@lasthash}}
+
+\renewbibmacro*{bbx:translator}[1]{%
+  \ifboolexpr{
+    test \ifusetranslator
+    and
+    not test {\ifnameundef{translator}}
+  }
+    {\ifnameidem{translator}
+       {\bibstring[\mkibid]{idem\thefield{gender}}}
+       {\usebibmacro{bbx:dashcheck}
+          {\bibnamedash}
+          {\printnames{translator}%
+           \setunit{\printdelim{translatortypedelim}}%
+           \usebibmacro{bbx:savehash}}}%
+     \usebibmacro{#1}%
+     \clearname{translator}}
+    {\global\undef\bbx@lasthash}}
+\makeatother
+
+%\renewbibmacro*{cite:full}{%
+%  \usebibmacro{cite:full:citepages}%
+%  \global\toggletrue{cbx:fullcite}%
+%  \printtext[bibhypertarget]{%
+%    \usedriver
+%      {\DeclareNameAlias{sortname}{default}}
+%      {\thefield{entrytype}}}%
+%  \usebibmacro{shorthandintro}}
 
 
 
