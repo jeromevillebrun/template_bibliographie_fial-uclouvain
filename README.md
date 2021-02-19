@@ -126,7 +126,7 @@ Todolist :
 
 
 * Je bloque complètement pour implémenter le référencement des sources éditées. Dans le style donné aux bac1 histoire, il n'y a que deux exemples, alors que c'est un type d'entrée qui comporte plein de cas de figures (que je ne connait pas tous à cause de mon manque d'expérience). Je ne sais pas comment faire pour que nom des auteurs antiques et médiévaux soient entièrement en petites capitales, mais pas ceux des auteurs modernes. De plus, la manière d'afficher le nom de l'éditeur scientifique est totalement absurde et incohérente avec les autres types d'entrées (Prénom avant le nom et mention "éd." avant le nom au lieu de après et entre parenthèses). Quelles-sont les règles non écrites utilisées en pratique pour référencer les sources éditées ? Que signifie le "pour la suite de la référence, se conformer aux directives de la faculté" ? Pour pouvoir automatiser quelque chose, il faut déjà avoir une idée claire de ce qui doit être fait, et c'est là que ce document d'uniformisation est un échec.
-* Gérer les ID, _op. cit._, etc. quand il s'agit de volumes différents d'un même livre.
+* Gérer les ID, _op. cit._, etc. quand il s'agit de volumes différents d'un même livre. https://geekographie.maieul.net/140 Cet article devrait pouvoir aider. Il parle plus d'un problème similaire avec les articles d'un même livre, qui sont considérées comme des entrées différentes (le problème se pose aussi, d'ailleurs, et il est possible que la solution en ce qui concerne les volumes soit similaire).
 * S'arranger pour qu'il n'affiche pas les informations qui ne sont pas sencées figurer dans certains types d'entrées (ex : langue).
 
 Les macros de biblatex se trouvent dans `cbx` (`/usr/local/texlive/2019/texmf-dist/tex/latex/biblatex/cbx/`).
