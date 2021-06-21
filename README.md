@@ -86,6 +86,10 @@ Il est destiné aux dictionnaires, bibliographies et encyclopédies, et se compo
 
 Utiliser la commande `\autocite[prenote][postnote]{clé_de_citation}` pour citer un document du fichier `.bib`. Celle-ci créera une note de bas de page à l'endroit de la citation. On la préfère à `\footcite{}` puisqu'elle permet d'utiliser le même texte avec un autre style bibliographique (qui aurait comme option une citation en fin d'ouvrage, par exemple). `prenote` est un bout de texte à afficher avant la référence (comme par exemple "Cf.", mais aussi un texte plus long pour faire une note explicative). `postnote` est un bout de texte à afficher après la référence, par exemple pour préciser un numéro de page → le numéro seul suffit : le "p.~" est ajouté automatiquement si la postnote est un numéro.
 
+### En cas de problème
+
+En cas de problème, il est toujours possible de créer une entrée utilisant le champ `execute`, dans lequel on met le code que l'on veut.
+
 ### Compiler
 
 À cause de l'utilisation d'une police très rarement utilisée en typographie (les petites capitales en gras de la page de garde fonctionnent avec latex, mais pas avec xelatex), il est nécessaire de compiler `page_de_garde_fial.tex` séparément de `main.tex` et avant ce dernier. Dans un terminal linux, il faut donc taper :
