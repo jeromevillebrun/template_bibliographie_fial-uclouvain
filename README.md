@@ -32,7 +32,7 @@ Il faut compiler avec xelatex (sur overleaf, changer le compilateur dans le menu
 La documentation de biblatex paragraphe 2.2.2 répertorie tous les champs définis. Il en existe plusieurs pour les titres. Il est important de bien les comprendre pour être capable de gérer aisément des cas complexes.
 
 * `title` : le titre de l'élément que l'on veut référencer.
-* `maintitle` : lorsque l'on a un publication en plusieurs volumes, on renseigne le titre de l'ensemble dans ce champ.
+* `maintitle` : lorsque l'on a une publication en plusieurs volumes, on renseigne le titre de l'ensemble dans ce champ.
 * `booktitle` : si `title` indique le titre d'un travail qui fait partie d'une publication plus grande, on indique dans `booktitle` le titre de cette publication. Par exemple, lorsque l'on cite un article d'ouvrage collectif, on y indique le titre de l'ouvrage collectif. Cependant, si cet ouvrage collectif est en plusieurs volumes, `booktitle` sera destiné à accueillir le titre du volume dans lequel se trouve l'article.
 
 ### vérifier les données bibliographiques
